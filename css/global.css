@@ -1,0 +1,226 @@
+@CHARSET "UTF-8";
+
+body {
+				width: 100%; height: 100%;
+				margin: 0; padding: 0;
+
+				overflow: hidden;
+			}
+
+			#wrapper {
+				width: 100%; height: 100%;
+				top: 0; left: 0;
+
+				background-color: #ccc;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			#mask {
+				width: 500%; height: 100%;
+				background-color: #eee;
+			}
+
+			.item {
+				width: 20%; height: 100%;
+
+				background-color: #fefefe;
+				float: left;
+			}
+
+			.content {
+				/* width: 400px; height: 300px; */
+				width: 100%; height: 100%;
+
+				/* background-color: #aaa; */
+				margin: 0 auto;
+				position: relative;
+			}
+
+			.selected {
+				/* background: #fff; */
+				font-weight: 700;
+			}
+
+			.clear { clear: both; }
+
+			#item1, #item2, #item3, #item3b {
+				background-position: center auto;
+				background-size: cover;
+			}
+
+			#item1 { background-image: url("../images/bg-01.jpg"); }
+			#item2 { background-image: url("../images/bg-02.jpg"); }
+			#item3 { background-image: url("../images/bg-03.jpg"); }
+			#item3b { background-image: url("../images/bg-03.jpg"); }
+
+
+			.content .logo {
+				width: 100px; height: 100px;
+				bottom: 20%; left: 46%;
+
+				background-image: url("../images/logo.png");
+				background-size: 100px 100px;
+				display: block;
+				margin: 0 auto;
+				position: absolute;
+			}
+
+			input {
+				margin: 10px 0; padding: 0 1rem;
+
+				background-color: white;
+				border: 0;
+				border-radius: 50px;
+				box-sizing: border-box;
+			}
+
+			.submit {
+				width: 116px; height: 45px;
+
+				background-image: url("../images/submit-btn.png");
+				background-size: 116px 45px;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			
+			.skip {
+				width: 116px; height: 45px;
+
+
+				background-size: 116px 45px;
+				display: none;
+				margin: 0 auto;
+			}
+
+			.left { float: left; }
+			.right { float: right; }
+
+			/*************************************** Page 01 ***/
+
+			#page-01-text {
+				width: 800px; height: 206px;
+
+				background-image: url("../images/page-01-txt.png");
+				background-size: 800px 206px;
+				margin: 6% auto;
+			}
+
+			#page-01-button {
+				width: 400px; height: 60px;
+
+				background-image: url("../images/page-01-btn.png");
+				background-size: 400px 60px;
+				display: block;
+				margin: -5% auto;
+			}
+
+			/*************************************** Page 02 ***/
+
+			#page-02-text-01 {
+				width: 450px; height: 75px;
+
+				background-image: url("../images/page-02-txt-01.png");
+				background-size: 450px 75px;
+				margin: 6% auto;
+				margin-bottom: 1rem;
+			}
+
+			#item2 form {
+				width: 37%; height: auto;
+				margin: 0 auto;
+				margin-bottom: 1rem;
+			}
+
+			#item2 input {
+				width: 500px; height: 40px;
+			}
+
+			#page-02-text-02 {
+				width: 500px; height: 51px;
+
+				background-image: url("../images/page-02-txt-02.png");
+				background-size: 500px 51px;
+				margin: 0 auto;
+				margin-bottom: 1rem;
+			}
+
+			/*************************************** Page 03 ***/
+
+			#page-03-text {
+				width: 600px; height: 297px;
+
+				background-image: url("../images/page-03-txt_opt.png");
+				background-size: 600px 297px;
+				margin: 6% auto;
+				margin-bottom: 1rem;
+			}
+			
+			#item3 form {
+				top: 0; left: 20%;
+
+				display: inline-block;
+				margin: 8% auto;
+				position: absolute;
+				width: 60%;
+			}
+
+			#item3 input {
+				width: 300px; height: 40px;
+			}
+
+			#img-name, #img-email, #img-fb, #img-tw {
+				width: 40px; height: 40px;
+
+				background-size: 40px 40px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			#img-name, #img-email { margin: 0 1rem 0 0; }
+
+			#img-name { background-image: url("../images/page-03-name.png"); }
+			#img-email { background-image: url("../images/page-03-email.png"); }
+
+			#img-fb, #img-tw { margin: 0 0 0 1rem; }
+
+			#img-fb { background-image: url("../images/page-03-fb.png"); }
+			#img-tw { background-image: url("../images/page-03-tw.png"); }
+			
+			/*************************************** Page 03b ***/
+
+			#page-03-textb {
+				width: 600px; height: 297px;
+
+				background-image: url("../images/page-03-txt_opt.png");
+				background-size: 600px 297px;
+				margin: 6% auto;
+				margin-bottom: 1rem;
+			}
+			
+			#item3b form {
+				top: 0; left: 20%;
+
+				display: inline-block;
+				margin: 8% auto;
+				position: absolute;
+				width: 60%;
+			}
+
+			#item3b input {
+				width: 300px; height: 40px;
+			}
+			
+
+.placehold:-moz-placeholder {
+  color: red;
+}
+.placehold:-ms-input-placeholder {
+  color: red;
+}
+	
+.placehold::-webkit-input-placeholder {
+   color: red;
+}			
+			
