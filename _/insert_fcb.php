@@ -15,9 +15,11 @@
 	$name = $_GET[na];
 	$coords = $_GET[coord];
 
-	
-	print_r($GET);
-	//print_r($pla);
+	$fee = mysql_real_escape_string($fee);
+	$pla = mysql_real_escape_string($pla);
+	$mail = mysql_real_escape_string($mail);
+	$name = mysql_real_escape_string($name);
+
 
 	$sql="SELECT IdUser, gap_key FROM users 
  					WHERE fcb_key = '" . $id .  "'";

@@ -15,9 +15,9 @@
 	$sql="SELECT IdUser FROM users 
  					WHERE gap_key = '" . $cookie .  "'";
 	$result = mysql_query ( $sql, $con );
-
+	//print_r($result);
 	$fetch = mysql_fetch_assoc ( $result ) ;
-
+	//print_r($fetch);
 	if (mysql_errno()) {
 		echo 0;
 	} else {

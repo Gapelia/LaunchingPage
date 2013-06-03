@@ -12,10 +12,12 @@
 	
 	$fee = $_GET[feeling];
 	$pla = $_GET[place];
+	
+	$pla = mysql_real_escape_string($pla);
+	$fee = mysql_real_escape_string($fee);
+	
 	$cookie = $_GET[key];
 	
-	print_r($fee);
-	print_r($pla);
 
 	$sql="SELECT IdUser FROM users 
  					WHERE gap_key = '" . $cookie .  "'";

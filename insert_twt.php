@@ -10,18 +10,16 @@
 		
 	$fee = $_SESSION[feeling];
 	$pla = $_SESSION[place];
-	
-	$fee = mysql_real_escape_string($fee);
-	$pla = mysql_real_escape_string($pla);
-	
 	$id = $content->id;
 	$name = $content->name;
 
-
+	
+	//print_r($GET);
+	//print_r($pla);
 
 	$sql="SELECT IdUser, gap_key FROM users 
  					WHERE twt_key = '" . $id .  "'";
-
+//	print_r($sql);
 	$result = mysql_query ( $sql, $con );
 	$fetch = mysql_fetch_assoc ( $result );
 	

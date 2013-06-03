@@ -9,10 +9,12 @@
 	mysql_select_db ( MOD );
 	
 	
+	
 	$mail = $_GET[emailb];
 	$pass = $_GET[passwdb];
 	
-
+	$mail = mysql_real_escape_string($mail);
+	$pass = mysql_real_escape_string($pass);
 	
 	$sql="SELECT * FROM users 
  					WHERE email = '" . $mail .  "'

@@ -14,8 +14,10 @@
 	$pla = $_GET[place];
 	$id = $_GET[id];
 	$coord = $_GET[coord];
-	print_r($fee);
-	print_r($pla);
+	
+	$fee = mysql_real_escape_string($fee);
+	$pla = mysql_real_escape_string($pla);
+	
 
 	
 	if ($id=='') {

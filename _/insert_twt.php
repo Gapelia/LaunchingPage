@@ -1,27 +1,27 @@
 <?php
 
 	session_start();
-
+//echo getcwd();
 	require( 'config.php' );
 
 	$con = mysql_connect ( SERV, USER, WRD ); 
 
 	mysql_select_db ( MOD );
 		
-	$fee = $_GET[feeling];
-	$pla = $_GET[place];
-	$mail = $_GET[m];
-	$id = $_GET[id];
-	$name = $_GET[na];
-	$coords = $_GET[coord];
-
+	$fee = $_SESSION[feeling];
+	$pla = $_SESSION[place];
 	
-	print_r($GET);
-	//print_r($pla);
+	$fee = mysql_real_escape_string($fee);
+	$pla = mysql_real_escape_string($pla);
+	
+	$id = $content->id;
+	$name = $content->name;
+
+
 
 	$sql="SELECT IdUser, gap_key FROM users 
- 					WHERE fcb_key = '" . $id .  "'";
-	
+ 					WHERE twt_key = '" . $id .  "'";
+
 	$result = mysql_query ( $sql, $con );
 	$fetch = mysql_fetch_assoc ( $result );
 	
@@ -32,17 +32,17 @@
 		$sql="INSERT INTO users 
  					SET email = '" . $mail . "',
  					    gap_key = '" . $gapKey . "',
- 					    fcb_key = '" . $id . "',
+ 					    twt_key = '" . $id . "',
  					    name = '" . utf8_decode($name) . "'";
  				
  		$result = mysql_query ( $sql, $con );
 	
- 		echo $gapKey;
+ 		$_SESSION['gapkey']= $gapKey;
  		
  		// GET THE USERID AND INSERT FEELING AND PLACE
  		
  		$sql="SELECT IdUser FROM users 
- 					WHERE fcb_key = '" . $id .  "'";
+ 					WHERE twt_key = '" . $id .  "'";
 	
 		$result = mysql_query ( $sql, $con );
 		$fetch = mysql_fetch_assoc ( $result );
@@ -52,7 +52,6 @@
 	
 		$sql="INSERT INTO raw_data 
 	 					SET place = '" . utf8_decode($pla) . "',
-	 					    coords = '" . $coords . "',
 	 					    IdUser = '" . $user . "',
 	 						feeling = '" .  utf8_decode($fee) . "'";
 	 						
@@ -64,13 +63,13 @@
 	
 	
 		$sql="INSERT INTO raw_data 
-	 					SET place = '" . utf8_decode($pla) . "',
-	 					    coords = '" . $coords . "',
+	 					SET place = '" . utf8_decode($pla)  . "',
 	 					    IdUser = '" . $user . "',
 	 						feeling = '" .  utf8_decode($fee) . "'";
 	 						
 		$result = mysql_query ( $sql, $con );
 		
-		echo $fetch[gap_key];
+		//echo $fetch[gap_key];
+		$_SESSION['gapkey']= $fetch[gap_key];
 	}
-	return;
+	

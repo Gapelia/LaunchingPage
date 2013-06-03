@@ -13,6 +13,9 @@
 	$mail = $_GET[email];
 	$pass = $_GET[passwd];
 	
+	$mail = mysql_real_escape_string($mail);
+	$pass = mysql_real_escape_string($pass);
+	
 	$sql="SELECT count(*) FROM users 
  					WHERE email = '" . $mail .  "'";
 	$res = mysql_query ( $sql, $con );
@@ -29,19 +32,11 @@
  					    gap_key = '" . $gapKey . "',
  						passwd = '" .  $pass . "'";
  		$result = mysql_query ( $sql, $con );
- 		
- 		// ADD COOKIE
-		//setCookie('gapelia',$gapKey,time() +3600*24*365);
+
 	
  		echo $gapKey;
 	}	
 
-	
-	
- 	//	if (mysql_errno()) { // If error
- 				
-	
- 	
-	//echo mysql_error ();
+
 	
 return;	
