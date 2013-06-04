@@ -117,7 +117,8 @@
 						<a id="page-01-button" class="panel" href="#item2"></a>
 
 						<a class="logo" href=""></a>
-						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a>
+						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
 					</div>
@@ -134,7 +135,7 @@
 						<form id="form-01" method="post">
 							<input id="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 							<input id="feeling" placeholder="FEELING ANY EMOTION..." type="text"/>
-							<input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true"/>
+							<!--/ <input type="submit" style="width: 0; height: 0; border: none; padding: 0;" hidefocus="true"/> /-->
 						</form>
 
 						<div id="page-02-text-02"></div>
@@ -142,7 +143,8 @@
 						<a id="skip_btn" class="skip" href="">SKIP</a>
 
 						<a class="logo" href=""></a>
-						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a>
+						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
 						<div id="modal">
@@ -193,7 +195,8 @@
 						<!--/ <a class="submit panel" href="#item4"></a> /-->
 
 						<a class="logo" href=""></a>
-						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a>
+						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
 					</div>
@@ -214,8 +217,8 @@
 							</div>
 
 							<div class="right">
-								<a href="" class="login-facebook">Login with Facebook</a><br/>
-								<a href="" class="login-twitter">Login with Twitter</a>
+								<a href="" id="fcb-02" class="login-facebook login">Login with Facebook</a><br/>
+								<a href="" id="twt-02" class="login-twitter login">Login with Twitter</a>
 								<!--/ <a href="" class="login-google">Login with Google+</a> /-->
 							</div>
 						</form>
@@ -223,7 +226,8 @@
 						<!--/ <a id="mailb" class="submit login" href=""></a> /-->
 
 						<a class="logo" href=""></a>
-						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a>
+						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
 					</div>
@@ -466,6 +470,7 @@
 					resizePanel();
 				});
 
+				// for intial set of logins
 				$("a.login").click(function() {
 					if ($(this).attr("id")=="fcb-01") {
 						// alert ("LOGIN FCB");
@@ -473,6 +478,42 @@
 					}
 
 					else if ($(this).attr("id")=="twt-01") {
+						// alert ("LOGIN TWT");
+						// get the auth URL
+
+						geocoder = new google.maps.Geocoder();
+
+						geocoder.geocode( { "address": place}, function(results, status) {
+							if (status == google.maps.GeocoderStatus.OK) {
+								phpUrl = "http://gapelia.com/twitter/redirect.php?feeling="+feeling+"&place="+place;
+
+								$.get(phpUrl).done(function(data) {
+									if (data == "0") {
+										alert("Could not connect to Twitter. Refresh the page or try again later.");
+									}
+
+									else {
+										window.location = data;
+									}
+								});
+							}
+						});
+					}
+
+					else if ($(this).attr("id")=="mail") { loginmail(); }
+					else if ($(this).attr("id")=="mailb") { checkmail(); }
+
+					return false;
+				});
+
+				// for second set of logins, when a user returns
+				$("a.login").click(function() {
+					if ($(this).attr("id")=="fcb-02") {
+						// alert ("LOGIN FCB");
+						fb_login();
+					}
+
+					else if ($(this).attr("id")=="twt-02") {
 						// alert ("LOGIN TWT");
 						// get the auth URL
 

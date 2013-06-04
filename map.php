@@ -23,7 +23,7 @@
 
 	<body>
 
-		<button id="logoff" onclick="logoff()" >Logoff</button>
+		<button id="logoff" onclick="logoff()">Logoff</button>
 		<a href="index.php">BACK</a>
 
 		<br/>
@@ -145,6 +145,8 @@
 							infowindow.open(map,marker);
 						});
 					});
+
+					[ { "featureType": "administrative", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "stylers": [ { "visibility": "off" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "geometry", "stylers": [ { "lightness": 100 }, { "visibility": "on" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#2b94fe" }, { "lightness": -35 } ] },{ } ]
 				});
 			}
 
