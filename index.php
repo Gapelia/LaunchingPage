@@ -27,6 +27,17 @@
 		<link href="images/favicon.ico" rel="shortcut icon"/>
 
 		<style>
+			.logo-tagline {
+				width: auto; height: auto;
+				bottom: 16%; left: 46.6%;
+
+				color: #fefefe;
+				font-size: 16px;
+				font-style: italic;
+				font-weight: 700;
+				position: absolute;
+			}
+
 			.content .logo-fb, .content .logo-tb {
 				width: 90px; height: 90px;
 
@@ -61,13 +72,17 @@
 				right: 39%;
 			}
 
-			.go-back {
+			.go-back, #skip_btn {
 				margin: 1rem; padding: 0.5rem;
+				top: 0; left: 0;
 
 				background-color: #191919;
 				box-sizing: border-box;
 				color: #fefefe;
 				opacity: 0.5;
+				position: absolute;
+				text-align: center;
+				width: 50px;
 			}
 
 			.close {
@@ -116,8 +131,7 @@
 						<div id="page-01-text"></div>
 						<a id="page-01-button" class="panel" href="#item2"></a>
 
-						<a class="logo" href=""></a>
-						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
@@ -130,7 +144,6 @@
 					<div class="content">
 
 						<div id="page-02-text-01"></div>
-						<a href="http://localhost/g-launch#item1" class="go-back">BACK</a>
 
 						<form id="form-01" method="post">
 							<input id="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
@@ -142,8 +155,7 @@
 						<a id="new_btn" class="submit panel" href="#item3"></a><!--/ <a href="#" id="button">Click me</a> /-->
 						<a id="skip_btn" class="skip" href="">SKIP</a>
 
-						<a class="logo" href=""></a>
-						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
@@ -155,17 +167,6 @@
 							</div>
 						</div>
 
-						<!--/
-						<div id="modal">
-							<div id="heading">New Gapelian?</div>
-
-							<div id="content">
-								<a id="YES" href="#" class="button green close"><img src="images/tick.png" alt=""/>I am a new Gapelian</a>
-								<a id="NO" href="#" class="button red close"><img src="images/cross.png" alt=""/>I am a returning Gapelian</a>
-							</div>
-						</div>
-						/-->
-
 					</div>
 				</div>
 
@@ -175,7 +176,6 @@
 					<div class="content">
 
 						<div id="page-03-text"></div>
-						<a href="http://localhost/g-launch#item2" class="go-back">BACK</a>
 
 						<form>
 							<div class="left">
@@ -194,8 +194,7 @@
 
 						<!--/ <a class="submit panel" href="#item4"></a> /-->
 
-						<a class="logo" href=""></a>
-						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
@@ -208,7 +207,6 @@
 					<div class="content">
 
 						<div id="page-03-textb"></div>
-						<a href="http://localhost/g-launch#item2" class="go-back">BACK</a>
 
 						<form>
 							<div class="left">
@@ -225,8 +223,7 @@
 
 						<!--/ <a id="mailb" class="submit login" href=""></a> /-->
 
-						<a class="logo" href=""></a>
-						<!--/ <a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196" target="_blank">fb</a> /-->
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
 						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 

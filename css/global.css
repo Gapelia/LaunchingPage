@@ -48,7 +48,7 @@ body {
 	background-size: cover;
 }
 
-#item1 { background-image: url("../images/bg-01.jpg"); }
+#item1 { background-image: url("../images/bg-04.jpg"); }
 #item2 { background-image: url("../images/bg-02.jpg"); }
 #item3 { background-image: url("../images/bg-03.jpg"); }
 #item3b { background-image: url("../images/bg-03.jpg"); }
@@ -82,7 +82,7 @@ input {
 	margin: 0 auto;
 }
 
-
+/*
 .skip {
 	width: 116px; height: 45px;
 
@@ -90,6 +90,7 @@ input {
 	display: none;
 	margin: 0 auto;
 }
+*/
 
 .left { float: left; }
 .right { float: right; }
