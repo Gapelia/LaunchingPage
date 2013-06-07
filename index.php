@@ -149,7 +149,7 @@
 						<form id="form-01" method="post">
 							<input id="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 							<input id="feeling" placeholder="FEELING ANY EMOTION..." type="text"/>
-							<!--/ <input type="submit" style="width: 0; height: 0; border: none; padding: 0;" hidefocus="true"/> /-->
+							<input type="submit" style="width: 0; height: 0; border: none; padding: 0;" hidefocus="true"/>
 						</form>
 
 						<div id="page-02-text-02"></div>
@@ -183,7 +183,7 @@
 								<input id="input-email" name="email" type="email" placeholder="NEW EMAIL" required/><br/>
 								<input id="input-passwd" name="password" type="password" placeholder="NEW PASSWORD" required/>
 
-								<!--/ <a id="mail" class="submit login" href=""></a> /-->
+								<a id="mail" class="submit login" href=""></a>
 							</div>
 
 							<div class="right">
@@ -193,7 +193,7 @@
 							</div>
 						</form>
 
-						<!--/ <a class="submit panel" href="#item4"></a> /-->
+						<a class="submit panel" href="#item4"></a>
 
 						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
@@ -222,7 +222,7 @@
 							</div>
 						</form>
 
-						<!--/ <a id="mailb" class="submit login" href=""></a> /-->
+						<a id="mailb" class="submit login" href=""></a>
 
 						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
 						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
@@ -346,7 +346,7 @@
 
 						// if connected, or cookie exists, skip this process
 						if (con==1 || $.cookie("gapelia")!= null) {
-							//	alert("CONECTADO SKIP APPEARS");
+							// alert("CONECTADO SKIP APPEARS");
 							$("#skip_btn").css("display", "block");
 						}
 
