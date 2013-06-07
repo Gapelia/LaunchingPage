@@ -18,12 +18,14 @@
 				height: 100%;
 			}
 
+			a { cursor: pointer; }
+
 			#map_canvas { height: 100%; }
 
 			header {
 				width: 100%; height: auto;
 
-				background-color: #0060c0;
+				background-color: #326699;
 				box-sizing: border-box;
 				padding: 1rem;
 			}
@@ -43,15 +45,29 @@
 				line-height: 0;
 			}
 
-			#tagline {
+			#tagline, #tagline-ii {
 				color: #fefefe;
 				font-size: 16px;
-				margin: 0 0 0 1rem;
+			}
+
+			#tagline { margin: 0 0 0 1rem; }
+
+			#tagline-ii {
+				float: left;
+				margin: 2.5rem 1rem 0 0;
+			}
+
+			#tagline-ii, ul {
+				vertical-align: middle;
 			}
 
 			#social-links {
 				float: right;
 				width: auto;
+			}
+
+			#social-links ul {
+				margin: 0.7rem 0 0 0; padding: 0;
 			}
 
 			#social-links a {
@@ -82,13 +98,11 @@
 				width: 100%; height: auto;
 
 				background-color: #fefefe;
-				border-bottom: 1px solid #0060c0;
+				border-bottom: 1px solid #326699;
 				text-align: center;
 			}
 
-			#cta p {
-				margin: 0.5rem 0;
-			}
+			#cta p { margin: 0.5rem 0; }
 
 			#map-meta {
 				margin: 0 auto; padding: 0.3rem;
@@ -101,7 +115,14 @@
 				position: absolute;
 				text-align: center;
 				text-transform: uppercase;
-				width: 120px;
+				width: auto;
+			}
+
+			#map-meta span {
+				margin: 0 0.3rem 0 -0.5rem; padding: 0.3rem;
+
+				background-color: #326699;
+				color: #fefefe;
 			}
 
 			#map-meta a {
@@ -136,21 +157,29 @@
 			<h1 id="logo">Gapelia</h1>
 			<p id="tagline">Gapelia | Coming Soon</p>
 
-			<ul id="social-links">
-				<li id="share-email"><a href="mailto:?subject=Have a look at this!&amp;body=Gapelia helps you teleport and discover dreams! http://gapelia.com" target="_blank">Email</a></li>
+			<div id="social-links">
+				<!--/ <p id="tagline-ii">Share how the world thinks</p> /-->
 
-				<li id="share-facebook"><a href="https://www.facebook.com/dialog/feed?app_id=578454235517060&amp;link=http://gapelia.com&amp;picture=http://gapelia.com/images/FB.jpg&amp;name=Gapelia | Discover teleportation&amp;description=Discover your dreams and teleport to them, instantly!*&amp;redirect_uri=http://gapelia.com" target="_blank">Facebook</a></li>
+				<ul>
+					<li id="share-email"><a href="mailto:?subject=Have a look at this!&amp;body=Gapelia helps you teleport and discover dreams! http://gapelia.com" target="_blank">Email</a></li>
 
-				<li id="share-pinterest"><a href="">Pinterest</a></li>
-				<li id="share-twitter"><a href="https://twitter.com/share?original_referer=&amp;source=tweetbutton&amp;text=is uncovering their dreams (&amp;via=gapelia)." target="_blank">Twitter</a></li>
+					<li id="share-facebook"><a href="https://www.facebook.com/dialog/feed?app_id=578454235517060&amp;link=http://gapelia.com&amp;picture=http://gapelia.com/images/FB.jpg&amp;name=Gapelia | Discover teleportation&amp;description=Discover your dreams and teleport to them, instantly!*&amp;redirect_uri=http://gapelia.com" target="_blank">Facebook</a></li>
 
-				<!--/ <a href="https://m.google.com/app/plus/x/?v=compose&amp;content=I just love the spaced-out electronica grooves that FRSH%2BBTS (http://twitter.com/FRSHBTS) comes up with! Check it: the_permalink()" target="_blank">Google+</a> /-->
+					<!--/
+					<li id="share-pinterest"><a "http://www.tumblr.com/share/photo?source=http%3A%2F%2Ffarm6.static.flickr.com%2F5030%2F5601726196_08725e1979_z.jpg&caption=%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20This%20example%20uses%20the%20basic%20Tumblr%20Button%20in%20the%20article's%20footer%20to%20let%20Tumblr%20users%20easily%20promote%20this%20article%20on%20their%20blogs.%0A%20%20%20%20%20%20%20%20%20%20%20%20&click_thru=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fjfisher%2F5601726196" title="Share on Tumblr" target="_blank">Pinterest</a></li>
+					/-->
 
-			</ul>
+					<li id="share-twitter"><a href="https://twitter.com/share?original_referer=http://gapelia.com;source=tweetbutton&amp;text=is uncovering their dreams at http://gapelia.com (via @gapelia)." target="_blank">Twitter</a></li>
+
+					<!--/ <a href="https://m.google.com/app/plus/x/?v=compose&amp;content=I just love the spaced-out electronica grooves that FRSH%2BBTS (http://twitter.com/FRSHBTS) comes up with! Check it: the_permalink()" target="_blank">Google+</a> /-->
+				</ul>
+			</div>
 
 			<div id="map-meta">
-				<a id="logoff" onclick="logoff()">Logoff</a> | <a href="index.php">BACK</a>
+				<span>Share how the world thinks</span> <a id="logoff" href="index.php" onclick="logoff()">Logoff</a> | <a href="index.php">BACK</a>
+				<!--/ <a id="logoff" onclick="logoff()">Logoff</a> | <a href="index.php">BACK</a> /-->
 			</div>
+
 		</header>
 
 		<div id="cta">
@@ -165,58 +194,73 @@
 		<script src="http://maps.google.com/maps/api/js?key=AIzaSyCMqYZrdDg5sNRysahSHZh6t400-BwJtig&libraries=places&sensor=false"></script>
 
 		<script>
-		function logoff() {
-			$.removeCookie("gapelia");
+			var tumblr_photo_source = document.getElementById("source").src;
+			var tumblr_photo_caption = document.getElementById("caption").innerHTML;
+			var tumblr_photo_click_thru = document.getElementById("click_thru").href;
 
-			// log off server session
-			phpUrl = "http://gapelia.com/development/logoff.php";
-			$.get(phpUrl);
-		}
+			var tumblr_button = document.createElement("a");
+			tumblr_button.setAttribute("href", "http://www.tumblr.com/share/photo?source=" + encodeURIComponent(tumblr_photo_source) + "&caption=" + encodeURIComponent(tumblr_photo_caption) + "&click_thru=" + encodeURIComponent(tumblr_photo_click_thru));
+			tumblr_button.setAttribute("title", "Share on Tumblr");
+			tumblr_button.setAttribute("style", "display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('http://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;");
+			tumblr_button.innerHTML = "Share on Tumblr";
+			document.getElementById("footer").appendChild(tumblr_button);
+		</script>
 
-		$(document).ready(function() {
-			var cook = $.cookie("gapelia");
+		<script src="http://platform.tumblr.com/v1/share.js"></script>
 
-			// if there is a cookie from email or Facebook
-			if (cook != '' && cook != null) {
-				// get user ID
-				phpUrl = "http://gapelia.com/development/loginID.php?cookie="+$.cookie("gapelia"); 
+		<script>
+			function logoff() {
+				$.removeCookie("gapelia");
 
-				$.get(phpUrl).done(function(data) {
-					if (data== 0) {
-						// alert($.cookie("gapelia"));
-
-						alert('cookie Identification Error, please login again');
-						logoff();
-
-						// window.location = 'index.php';
-					}
-
-					initialize();
-				});
+				// log off server session
+				phpUrl = "http://gapelia.com/development/logoff.php";
+				$.get(phpUrl);
 			}
 
-			// no cookie
-			else {
-				// get session GAP key from TWT
-				phpUrl = "http://gapelia.com/development/gap_key.php";  
+			$(document).ready(function() {
+				var cook = $.cookie("gapelia");
 
-				$.get(phpUrl).done(function(data) {
-					if (data== 0) {
-						// alert("cookie"+data);
+				// if there is a cookie from email or Facebook
+				if (cook != '' && cook != null) {
+					// get user ID
+					phpUrl = "http://gapelia.com/development/loginID.php?cookie="+$.cookie("gapelia"); 
 
-						alert('SESSION Identification Error, please login again');
-						logoff();
+					$.get(phpUrl).done(function(data) {
+						if (data== 0) {
+							// alert($.cookie("gapelia"));
 
-						// window.location = 'index.php';
-					}
+							alert("Please login again");
+							logoff();
 
-					else {
-						$.cookie("gapelia", data, { expires: 1*1000*60*60*24*365 } );
+							// window.location = 'index.php';
+						}
+
 						initialize();
-					}
-				});
-			}
-		});
+					});
+				}
+
+				// no cookie
+				else {
+					// get session GAP key from TWT
+					phpUrl = "http://gapelia.com/development/gap_key.php";  
+
+					$.get(phpUrl).done(function(data) {
+						if (data== 0) {
+							// alert("cookie"+data);
+
+							alert("Please login again");
+							logoff();
+
+							// window.location = 'index.php';
+						}
+
+						else {
+							$.cookie("gapelia", data, { expires: 1*1000*60*60*24*365 } );
+							initialize();
+						}
+					});
+				}
+			});
 		</script>
 
 		<script>
@@ -234,11 +278,18 @@
 				});
 				*/
 
-				var stylez = [ { "featureType": "administrative", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "stylers": [ { "visibility": "off" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "geometry", "stylers": [ { "lightness": 100 }, { "visibility": "on" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#2b94fe" }, { "lightness": -35 } ] } ];
+				var stylez = [ { "featureType": "administrative", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road", "stylers": [ { "visibility": "off" } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "water", "elementType": "geometry", "stylers": [ { "lightness": 100 }, { "visibility": "on" }, { "color": "#b2d5fe" } ] },{ "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "visibility": "on" }, { "color": "#326699" }, { "lightness": 0 } ] } ];
 
 				var mapOptions = {
-					center: new google.maps.LatLng(40.420088, -3.688),
-					zoom: 2,
+					// center: new google.maps.LatLng(40.420088, -3.688),
+					center: new google.maps.LatLng(31.633333, -9.600000),
+					zoom: 3,
+					mapTypeControl: false,
+					// draggable: false,
+					scaleControl: false,
+					scrollwheel: false,
+					navigationControl: false,
+					streetViewControl: false,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
 
@@ -290,14 +341,14 @@
 						var marker = new google.maps.Marker({
 							position: position_place,
 							map: map,
-							title: 'Be Curious',
+							title: "Be Curious",
 							icon: iconBase + "marker.png",
 							shadow: iconBase + ""
 							// icon: iconBase + "schools_maps.png",
 							// shadow: iconBase + "schools_maps.shadow.png"
 						});
 
-						google.maps.event.addListener(marker, 'click', function() {
+						google.maps.event.addListener(marker, "click", function() {
 							infowindow.open(map,marker);
 						});
 					});

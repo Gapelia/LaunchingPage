@@ -49,6 +49,7 @@
 				box-sizing: border-box;
 				color: transparent;
 				display: inline-block;
+				display: none;
 				font-size: 0;
 				line-height: 0;
 				padding: 4rem 0;
