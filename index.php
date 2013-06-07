@@ -350,6 +350,10 @@
 							$("#skip_btn").css("display", "block");
 						}
 
+						else {
+							$("#skip_btn").css("display", "none");
+						}
+
 						return false;
 					}
 
