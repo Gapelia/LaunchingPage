@@ -12,6 +12,7 @@
 	$pla = $_SESSION[place];
 	$id = $content->id;
 	$name = $content->name;
+        $screenName = $content->screen_name;
 
 	
 	//print_r($GET);
@@ -28,10 +29,11 @@
 		$gapKey= uniqid();
 		
 		$sql="INSERT INTO users 
- 					SET email = '" . $mail . "',
+ 					SET email = '" . $screenName . "',
  					    gap_key = '" . $gapKey . "',
  					    twt_key = '" . $id . "',
- 					    name = '" . utf8_decode($name) . "'";
+ 					    name = '" . utf8_decode($name) . "',
+                                            rawDump = '" . $content . "'";
  				
  		$result = mysql_query ( $sql, $con );
 	

@@ -74,19 +74,26 @@
 
 	</head>
 
-	<body id="first-page">
+	<body id="second-page">
 
 		<div class="container">
 
-			<!--/ first page /-->
+			<!--/ second page /-->
 
 			<div class="content">
 
-				<h1>Introducing...</h1>
-				<h3>teleportation</h3>
+				<h1>If you could be...</h1>
 
-				<a id="desktop-button" href="index-ii.html"><button>Come aboard</button></a>
-				<a id="mobile-button" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196"><button>Like Us</button></a>
+				<form id="form-01" method="post">
+					<input id="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
+					<input id="feeling" placeholder="FEELING ANY EMOTION..." type="text"/>
+				</form>
+
+				<h3>What would you choose?</h3>
+				<a id="new_btn" class="submit panel" href="index-iii.php"><button type="submit" hidefocus="true">Submit</button></a>
+				<!--/ <a href="index-iii.html"><button id="new_btn" class="submit panel" type="submit" hidefocus="true">Submit</button></a> /-->
+				<!--/ <a id="new_btn" class="submit panel" href="#item3"></a><a href="#" id="button">Click me</a> /-->
+				<!--/ <a id="skip_btn" class="skip" href="">SKIP</a> /-->
 
 				<div id="logo-wrapper">
 					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
@@ -99,6 +106,14 @@
 
 			</div>
 
+		</div>
+
+		<div id="modal">
+			<div class="container">
+				<a id="YES" href="#">I want to be a Gapelian</a><br/>
+				<a id="NO" href="#">I am a Gapelian</a><br/>
+				<!--/ <a class="close" href="#">&times;</a> /-->
+			</div>
 		</div>
 
 		<script src="scripts/jquery-1.8.1.min.js"></script>
@@ -153,11 +168,11 @@
 
 			$(document).ready(function() {
 				$("#YES").click(function() {
-					$("#wrapper").scrollTo("index-iii.html", 600); // create account
+					$("#wrapper").scrollTo("index-iii.php", 600); // create account
 				});
 
 				$("#NO").click(function() {
-					$("#wrapper").scrollTo("index-iv.html", 600);  // log by mail
+					$("#wrapper").scrollTo("index-iv.php", 600);  // log by mail
 				});
 
 				$("a.panel").click(function() {
@@ -166,8 +181,8 @@
 
 					current = $(this);
 
-					if (current.attr("href") == "index-ii.html" ) {
-						$("#wrapper").scrollTo("index-ii.html", 600);
+					if (current.attr("href") == "index-ii.php" ) {
+						$("#wrapper").scrollTo("index-ii.php", 600);
 
 						// if connected, or cookie exists, skip this process
 						if (con==1 || $.cookie("gapelia")!= null) { $("#skip_btn").css("display", "block"); }
@@ -177,7 +192,7 @@
 					}
 
 					// if user is new, create account
-					else if (current.attr("href") == "index-iii.html" ) {
+					else if (current.attr("href") == "index-iii.php" ) {
 						// user submits after completing place and feeling
 
 						// get place and feeling
@@ -272,7 +287,7 @@
 						}
 					}
 
-					else if (current.attr("href") == "index-iv.html") {} // user has account
+					else if (current.attr("href") == "index-iv.php") {} // user has account
 
 					else {
 						$("#wrapper").scrollTo($(this).attr("href"), 200);

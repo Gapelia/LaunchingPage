@@ -29,18 +29,13 @@ body {
 }
 
 .content {
-	width: 100%; height: 100%; /* width: 400px; height: 300px; */
+	width: 100%; height: 100%;
 
-	/* background-color: #aaa; */
 	margin: 0 auto;
 	position: relative;
 }
 
-.selected {
-	/* background: #fff; */
-	font-weight: 700;
-}
-
+.selected { font-weight: 700; }
 .clear { clear: both; }
 
 #item1, #item2, #item3, #item3b {
@@ -81,16 +76,6 @@ input {
 	display: block;
 	margin: 0 auto;
 }
-
-/*
-.skip {
-	width: 116px; height: 45px;
-
-	background-size: 116px 45px;
-	display: none;
-	margin: 0 auto;
-}
-*/
 
 .left { float: left; }
 .right { float: right; }

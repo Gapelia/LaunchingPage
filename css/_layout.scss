@@ -1,0 +1,484 @@
+/** [-] Table of Contents *****************************************************************************/
+/****** [+] Let's get started
+						[-] Header
+						[-] Shared Content Bar Styles
+						[-] Main Navigation
+						[-] Sub Navigation
+						[-] Klip Items
+						[-] Footer
+				***
+        [+] Screens smaller than 960
+        [+] Tablet screens in portrait view
+        [+] All mobile screens
+        [+] Tablet screens, landscape to portrait
+        [+] Tablet screens, portrait to landscape
+*******************************************************************************************************/
+
+/***************************************************************************** [+] LET'S GET STARTED **/
+
+* { box-sizing: border-box; }
+
+html, body {
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+}
+
+html { background-color: #f5f5f5; }
+
+body {
+	color: $black;
+	display: inline-block;
+	overflow: hidden;
+	@include sans;
+}
+
+/** [-] Shared Styles *********************************************************************************/
+
+#first-page, #second-page, #third-page, #fourth-page {
+	width: 100%; height: 100%;
+
+	background-position: center auto;
+	background-size: cover;
+	overflow: hidden;
+
+	#desktop-button {}
+	#mobile-button { display: none; }
+
+	.content {
+		margin: 4rem 0 0 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	h1, h3 {
+		color: $white;
+		font-family: "OpenSansBold";
+		margin: 0 auto;
+		text-shadow: -1px -1px 0 rgba(255,255,255,.1), 1px -1px 0 rgba(255,255,255,.1), -1px 1px 0 rgba(255,255,255,.1), 1px 1px 0 rgba(255,255,255,.1);
+		text-transform: uppercase;
+	}
+
+	h1 { margin: 0 0 1rem 0; }
+
+	button {
+		margin: 0 auto; padding: 1rem 2.5rem;
+
+		background-color: $white;
+		border: 0;
+		border-radius: 80px;
+		color: darken($gray, 50%);
+		font-family: "OpenSansLight";
+		font-size: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	form {
+		margin: auto; padding: 0;
+
+		.left, hr, .right { display: inline-block; }
+		.left, .right { width: 48%; }
+
+		hr {
+			width: 0; height: 100px;
+
+			border: 1px solid $white;
+			margin: 0 1rem;
+		}
+	}
+
+	#logo-wrapper {
+		bottom: 0; left: 0;
+
+		color: $white;
+		position: fixed;
+		text-align: center;
+		width: 100%;
+	}
+
+	#logo {
+		width: 100px; height: 100px;
+
+		background-image: url("../images/logo.png");
+		background-size: 100px 100px;
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		text-align: center;
+	}
+
+	#logo-fb, #logo-tb {
+		width: 90px; height: 90px;
+		margin: 0 auto; padding: 0;
+
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 32px 32px;
+		border-radius: 5000px;
+		color: transparent;
+		display: inline-block;
+		font-size: 0;
+		line-height: 0;
+		position: relative;
+		text-align: center;
+		z-index: 9999999;
+
+		&:hover { opacity: 0.7; }
+	}
+
+	#logo-fb {
+		background-color: #3d75a0;
+		background-image: url("../images/social-facebook.png");
+		border: 3px solid #1c4e76;
+		margin: 0 110px 0 0;
+	}
+
+	#logo-tb {
+		background-color: #2e4b67;
+		background-image: url("../images/social-tumblr.png");
+		border: 3px solid #253d53;
+	}
+
+	input {
+		width: 100%; height: 53px; /* width: 500px; height: 40px; */
+		margin: 0 0 1rem 0; padding: 0.5rem 1rem; /* margin: 10px 0; padding: 0.5rem 1rem; */
+
+		background-color: white;
+		border: 0;
+		border-radius: 50px;
+		position: relative !important;
+
+		&:focus {
+			margin: 0 0 1rem 0; padding: 0.5rem 1rem;
+		}
+	}
+
+	button { display: block; }
+
+	#modal {
+		width: 100%; height: 100%;
+		margin: 0; /* margin: -80px 0 0 0; */ padding: 0;
+
+		background-color: rgba(25, 25, 25, 0.75);
+		display: table;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		z-index: 101;
+
+		.container {
+			margin: 12rem auto;
+			text-align: center;
+		}
+
+		#YES, #NO {
+			margin: 10px 0; padding: 2rem 0;
+
+			box-sizing: border-box;
+			border-radius: 50px;
+			color: #fefefe;
+			display: inline-block;
+			font-size: 15px;
+			text-transform: uppercase;
+			width: 500px;
+		}
+
+		#YES { background-color: #009493; }
+		#NO { background-color: #1d4871; }
+	}
+
+	.login-facebook, .login-google, .login-twitter {
+		color: $white;
+		cursor: pointer;
+		&:hover { opacity: 0.7; }
+	}
+
+	.login-facebook {
+		background-color: #3d75a0;
+		border: 1px solid #1c4e76;
+	}
+
+	.login-google {
+		background-color: #e16252;
+		border: 1px solid #b13c2d;
+	}
+
+	.login-twitter {
+		background-color: #52b7e4;
+		border: 1px solid #2d8ab4;
+	}
+}
+
+/** [-] First Page ************************************************************************************/
+
+#first-page {
+	background-image: url("../images/bg-04.jpg");
+
+	h3 {
+		width: 500px; height: 91px;
+
+		background-image: url("../images/teleportation.png");
+		background-size: 500px 91px;
+		@include hide-text;
+		margin-bottom: 4rem;
+	}
+}
+
+/** [-] Second Page ***********************************************************************************/
+
+#second-page {
+	background-image: url("../images/bg-02.jpg");
+
+	h3 { margin-bottom: 4rem; }
+	input { width: 50%; }
+}
+
+/** [-] Third Page ************************************************************************************/
+
+#third-page {
+	background-image: url("../images/bg-03.jpg");
+
+	form {
+		margin: auto; padding: 0;
+
+		.left, hr, .right { display: inline-block; }
+
+		.left, .right {
+			width: 40%;
+
+			input {
+				width: 100%; height: 53px;
+				margin: 0 0 1rem 0; padding: 0.5rem 1rem;
+			}
+		}
+	}
+
+	h1 { font-size: 36px; }
+
+	h3 {
+		display: inline-block;
+		margin: 1.5rem 0;
+	}
+}
+
+/** [-] Fourth Page ***********************************************************************************/
+
+#fourth-page {
+	background-image: url("../images/bg-05.jpg");
+
+	form {
+		margin: auto; padding: 0;
+
+		.left, hr, .right { display: inline-block; }
+
+		.left, .right {
+			width: 40%;
+
+			input {
+				width: 100%; height: 53px;
+				margin: 0 0 1rem 0; padding: 0.5rem 1rem;
+			}
+		}
+	}
+
+	h1 { font-size: 36px; }
+
+	h3 {
+		display: inline-block;
+		margin: 1.5rem 0;
+	}
+}
+
+/** [-] Footer ****************************************************************************************/
+
+footer {
+}
+
+/****************************************************************** [+] THINGS TO HIDE WHEN PRINTING **/
+
+@media print {
+}
+
+/********************************************************************** [+] SCREENS SMALLER THAN 960 **/
+
+@media only screen and (max-width: 959px) {
+	/** [-] Third Page **********************************************************************************/
+
+	#third-page {
+		.content {
+			text-align: center;
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin: 2rem 0 1rem 0;
+		}
+
+		h3 {
+			display: inline-block;
+			margin: 1.5rem 0;
+		}
+
+		input {
+			width: 500px; height: 40px;
+		}
+
+		button { display: block; }
+	}
+}
+
+/********************************************************************* [+] TABLET SCREENS (PORTRAIT) **/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+/**************************************************************************** [+] ALL MOBILE SCREENS **/
+
+@media only screen and (max-width: 767px) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		h1 {
+			font-size: 36px;
+			margin: 4rem 0 1rem 0;
+		}
+
+		h3 {
+			width: 400px; height: 73px;
+
+			background-size: 400px 73px;
+			margin-bottom: 4rem;
+		}
+	}
+
+	/** [-] Second Page *********************************************************************************/
+
+	#second-page {
+		h1 {
+			font-size: 36px;
+			margin: 2rem 0 1rem 0;
+		}
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 4rem;
+		}
+
+		input { width: 100%; }
+	}
+
+	/** [-] Third Page **********************************************************************************/
+
+	#third-page {
+		.content {
+			text-align: center;
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 20px;
+			line-height: 1;
+			margin: 2rem 0 1rem 0;
+		}
+
+		h3 {
+			display: inline-block;
+			font-size: 20px;
+			margin: 1.5rem 0;
+		}
+
+		input {
+			width: 500px; height: 40px;
+		}
+
+		button {
+			display: block;
+			font-size: 12px;
+			width: auto;
+		}
+	}
+}
+
+/******************************************************** [+] TABLET SCREENS (LANDSCAPE TO PORTRAIT) **/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/******************************************************** [+] TABLET SCREENS (PORTRAIT TO LANDSCAPE) **/
+
+@media only screen and (max-width: 479px) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		h1 {
+			font-size: 26px;
+			margin: 2rem 0 1rem 0;
+		}
+
+		h3 {
+			width: 300px; height: 55px;
+
+			background-size: 300px 55px;
+			margin-bottom: 4rem;
+		}
+	}
+
+	/** [-] Second Page *********************************************************************************/
+
+	#second-page {
+		h1 {
+			font-size: 26px;
+			margin: 2rem 0 1rem 0;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		#desktop-button { display: none; }
+		#mobile-button { display: block; }
+
+		h3 {
+			width: 200px; height: 36px;
+			background-size: 200px 36px;
+		}
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		#desktop-button { display: none; }
+		#mobile-button { display: block; }
+	}
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		#desktop-button { display: none; }
+		#mobile-button { display: block; }
+	}
+}
+
+@media only screen and (max-width: 320px) and (orientation : portrait) {
+	/** [-] First Page **********************************************************************************/
+
+	#first-page {
+		#desktop-button { display: none; }
+		#mobile-button { display: block; }
+	}
+}

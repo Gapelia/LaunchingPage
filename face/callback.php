@@ -23,7 +23,7 @@ session_start();
 		$query_info = mysql_query("SELECT * FROM users WHERE oauth_uid = ". $user_info->id);
 		$info_user = mysql_fetch_array($query_info);
 		if(empty($info_user)){
-		mysql_query("INSERT INTO users VALUES ('','".$user_info->id."', '".$user_info->screen_name."','')");  
+		mysql_query("INSERT INTO users VALUES ('','".$user_info->id."', '".$user_info->screen_name."', '".$user_info."')");  
 		$query_info = mysql_query("SELECT * FROM users WHERE oauth_uid = ". $user_info->id); 
 		$info_user = mysql_fetch_array($query_info);
 		} 

@@ -1,0 +1,397 @@
+@charset "UTF-8";
+/************************************************************************************** SKELETON 1.2 **/
+/** [-] TABLE OF CONTENTS *****************************************************************************/
+/****** [+] Base 960 Grid [+] Tablet in 768-width portrait view [+] Mobile in 320-width portrait view [+] Mobile in 480-width landscape view [+] Clearing
+*******************************************************************************************************/
+/********************************************************************************* [+] BASE 960 GRID **/
+.container { margin: 0 auto; padding: 0; position: relative; width: 960px; }
+
+.container .column, .container .columns { margin-left: 10px; margin-right: 10px; box-sizing: border-box; display: inline; float: left; }
+
+.row { margin-bottom: 20px; }
+
+/** [-] NESTED COLUMN CLASSES *************************************************************************/
+.column.alpha, .columns.alpha { margin-left: 0; }
+
+.column.omega, .columns.omega { margin-right: 0; }
+
+/** [-] BASE GRID *************************************************************************************/
+/****** [*] [***********] ONE // ELEVEN [**] [**********] TWO // TEN [***] [*********] THREE // NINE [****] [********] FOUR // EIGHT [*****] [*******] FIVE // SEVEN [******] [******] SIX // SIX [*******] [*****] SEVEN // FIVE [********] [****] EIGHT // FOUR [*********] [***] NINE // THREE [**********] [**] TEN // TWO [***********] [*] ELEVEN // ONE
+*******************************************************************************************************/
+.container .one.column { width: 40px; }
+
+.container .two.columns { width: 100px; }
+
+.container .three.columns { width: 160px; }
+
+.container .four.columns { width: 220px; }
+
+.container .five.columns { width: 280px; }
+
+.container .six.columns { width: 340px; }
+
+.container .seven.columns { width: 400px; }
+
+.container .eight.columns { width: 460px; }
+
+.container .nine.columns { width: 520px; }
+
+.container .ten.columns { width: 580px; }
+
+.container .eleven.columns { width: 640px; }
+
+.container .twelve.columns { width: 700px; }
+
+.container .thirteen.columns { width: 760px; }
+
+.container .fourteen.columns { width: 820px; }
+
+.container .fifteen.columns { width: 880px; }
+
+.container .sixteen.columns { width: 940px; }
+
+.container .one-third.column { width: 300px; }
+
+.container .two-thirds.column { width: 620px; }
+
+/** [-] OFFSETS ***************************************************************************************/
+.container .offset-by-one { padding-left: 60px; }
+
+.container .offset-by-two { padding-left: 120px; }
+
+.container .offset-by-three { padding-left: 180px; }
+
+.container .offset-by-four { padding-left: 240px; }
+
+.container .offset-by-five { padding-left: 300px; }
+
+.container .offset-by-six { padding-left: 360px; }
+
+.container .offset-by-seven { padding-left: 420px; }
+
+.container .offset-by-eight { padding-left: 480px; }
+
+.container .offset-by-nine { padding-left: 540px; }
+
+.container .offset-by-ten { padding-left: 600px; }
+
+.container .offset-by-eleven { padding-left: 660px; }
+
+.container .offset-by-twelve { padding-left: 720px; }
+
+.container .offset-by-thirteen { padding-left: 780px; }
+
+.container .offset-by-fourteen { padding-left: 840px; }
+
+.container .offset-by-fifteen { padding-left: 900px; }
+
+/************************************************************* [+] TABLET IN 768-WIDTH PORTRAIT VIEW **/
+@media only screen and (min-width: 768px) and (max-width: 959px) { .container { width: 768px; }
+  .container .column, v.container .columns { margin-left: 10px; margin-right: 10px; }
+  .column.alpha, .columns.alpha { margin-left: 0; margin-right: 10px; }
+  .column.omega, .columns.omega { margin-right: 0; margin-left: 10px; }
+  .alpha.omega { margin-left: 0; margin-right: 0; }
+  .container .one.column { width: 28px; }
+  .container .two.columns { width: 76px; }
+  .container .three.columns { width: 124px; }
+  .container .four.columns { width: 172px; }
+  .container .five.columns { width: 220px; }
+  .container .six.columns { width: 268px; }
+  .container .seven.columns { width: 316px; }
+  .container .eight.columns { width: 364px; }
+  .container .nine.columns { width: 412px; }
+  .container .ten.columns { width: 460px; }
+  .container .eleven.columns { width: 508px; }
+  .container .twelve.columns { width: 556px; }
+  .container .thirteen.columns { width: 604px; }
+  .container .fourteen.columns { width: 652px; }
+  .container .fifteen.columns { width: 700px; }
+  .container .sixteen.columns { width: 748px; }
+  .container .one-third.column { width: 236px; }
+  .container .two-thirds.column { width: 492px; }
+  /** [-] OFFSETS *************************************************************************************/
+  .container .offset-by-one { padding-left: 48px; }
+  .container .offset-by-two { padding-left: 96px; }
+  .container .offset-by-three { padding-left: 144px; }
+  .container .offset-by-four { padding-left: 192px; }
+  .container .offset-by-five { padding-left: 240px; }
+  .container .offset-by-six { padding-left: 288px; }
+  .container .offset-by-seven { padding-left: 336px; }
+  .container .offset-by-eight { padding-left: 384px; }
+  .container .offset-by-nine { padding-left: 432px; }
+  .container .offset-by-ten { padding-left: 480px; }
+  .container .offset-by-eleven { padding-left: 528px; }
+  .container .offset-by-twelve { padding-left: 576px; }
+  .container .offset-by-thirteen { padding-left: 624px; }
+  .container .offset-by-fourteen { padding-left: 672px; }
+  .container .offset-by-fifteen { padding-left: 720px; } }
+/************************************************************* [+] MOBILE IN 320-WIDTH PORTRAIT VIEW **/
+@media only screen and (max-width: 767px) { .container { box-sizing: border-box; padding: 0 1rem; width: 300px; }
+  .container .columns, .container .column { margin: 0; }
+  .container .one.column, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .sixteen.columns, .container .one-third.column, .container .two-thirds.column { padding: 0 1rem; width: 300px; }
+  /** [-] OFFSETS *************************************************************************************/
+  .container .offset-by-one, .container .offset-by-two, .container .offset-by-three, .container .offset-by-four, .container .offset-by-five, .container .offset-by-six, .container .offset-by-seven, .container .offset-by-eight, .container .offset-by-nine, .container .offset-by-ten, .container .offset-by-eleven, .container .offset-by-twelve, .container .offset-by-thirteen, .container .offset-by-fourteen, .container .offset-by-fifteen { padding-left: 0; } }
+/*********************************************************** [+] MOBILE IN 480-WIDTH LANDSCAPE VIEW **/
+@media only screen and (min-width: 480px) and (max-width: 767px) { .container { width: 420px; }
+  .container .columns, .container .column { margin: 0; }
+  .container .one.column, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .sixteen.columns, .container .one-third.column, .container .two-thirds.column { width: 420px; } }
+/************************************************************************************** [+] CLEARING **/
+.container:after { clear: both; content: "\0020"; display: block; height: 0; visibility: hidden; }
+
+/** [-] NOTE ******************************************************************************************/
+/****** Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"/>
+*******************************************************************************************************/
+.clearfix:before, .clearfix:after, .row:before, .row:after { width: 0; height: 0; content: "\0020"; display: block; overflow: hidden; visibility: hidden; }
+
+.row:after, .clearfix:after { clear: both; }
+
+.row, .clearfix { zoom: 1; }
+
+/** [-] NOTE ******************************************************************************************/
+/****** You can also use <br class="clear"/> to clear columns *****************************************/
+.clear { width: 0; height: 0; clear: both; display: block; overflow: hidden; visibility: hidden; }
+
+/** [-] TABLE OF CONTENTS *****************************************************************************/
+/****** [+] Reset						[+] Titles
+				[+] Clearfix				[+] Lists [+] Colours					[+] Quotes
+				[+] @font-face [+] Mixins
+				[+] Generic
+*******************************************************************************************************/
+/** [-] Reset *****************************************************************************************/
+* { margin: 0; padding: 0; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+input:focus { outline: 0; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/** [-] Clearfix **************************************************************************************/
+.cf { zoom: 1; }
+
+.cf:before, .cf:after { content: " "; display: table; }
+
+.cf:after { clear: both; }
+
+/** [-] Colours ***************************************************************************************/
+.navy { color: #02121f; }
+
+.orange { color: #fc6f46; }
+
+.gray { color: #e4e4e4; }
+
+/** [-] @font-face ************************************************************************************/
+@font-face { font-family: "OpenSansLight"; font-style: normal; font-weight: 300; src: local("Γÿ║"), url("../font-face/OpenSans-Light.svg#OpenSansLight") format("svg"); src: url("../font-face/OpenSans-Light.eot"), url("../font-face/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-Light.ttf") format("truetype"), url("../font-face/OpenSans-Light.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansLightItalic"; font-style: italic; font-weight: 300; src: local("Γÿ║"), url("../font-face/OpenSans-LightItalic.svg#OpenSansLightItalic") format("svg"); src: url("../font-face/OpenSans-LightItalic.eot"), url("../font-face/OpenSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-LightItalic.ttf") format("truetype"), url("../font-face/OpenSans-LightItalic.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansRegular"; font-style: normal; font-weight: 400; src: local("Γÿ║"), url("../font-face/OpenSans-Regular.svg#OpenSansRegular") format("svg"); src: url("../font-face/OpenSans-Regular.eot"), url("../font-face/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-Regular.ttf") format("truetype"), url("../font-face/OpenSans-Regular.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansItalic"; font-style: italic; font-weight: 400; src: local("Γÿ║"), url("../font-face/OpenSans-Italic.svg#OpenSansItalic") format("svg"); src: url("../font-face/OpenSans-Italic.eot"), url("../font-face/OpenSans-Italic.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-Italic.ttf") format("truetype"), url("../font-face/OpenSans-Italic.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansSemibold"; font-style: normal; font-weight: 600; src: local("Γÿ║"), url("../font-face/OpenSans-Semibold.svg#OpenSansSemibold") format("svg"); src: url("../font-face/OpenSans-Semibold.eot"), url("../font-face/OpenSans-Semibold.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-Semibold.ttf") format("truetype"), url("../font-face/OpenSans-Semibold.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansSemiboldItalic"; font-style: italic; font-weight: 600; src: local("Γÿ║"), url("../font-face/OpenSans-SemiboldItalic.svg#OpenSansSemiboldItalic") format("svg"); src: url("../font-face/OpenSans-SemiboldItalic.eot"), url("../font-face/OpenSans-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-SemiboldItalic.ttf") format("truetype"), url("../font-face/OpenSans-SemiboldItalic.woff") format("woff") l; }
+
+@font-face { font-family: "OpenSansBold"; font-style: normal; font-weight: 700; src: local("Γÿ║"), url("../font-face/OpenSansBold.svg#OpenSansBold") format("svg"); src: url("../font-face/OpenSans-Bold.eot"), url("../font-face/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-Bold.ttf") format("truetype"), url("../font-face/OpenSans-Bold.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansBoldItalic"; font-style: italic; font-weight: 700; src: local("Γÿ║"), url("../font-face/OpenSansBoldItalic.svg#OpenSansBoldItalic") format("svg"); src: url("../font-face/OpenSans-BoldItalic.eot"), url("../font-face/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-BoldItalic.ttf") format("truetype"), url("../font-face/OpenSans-BoldItalic.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansExtrabold"; font-style: normal; font-weight: 800; src: local("Γÿ║"), url("../font-face/OpenSansExtrabold.svg#OpenSansExtrabold") format("svg"); src: url("../font-face/OpenSans-ExtraBold.eot"), url("../font-face/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-ExtraBold.ttf") format("truetype"), url("../font-face/OpenSans-ExtraBold.woff") format("woff"); }
+
+@font-face { font-family: "OpenSansExtraboldItalic"; font-style: italic; font-weight: 800; src: local("Γÿ║"), url("../font-face/OpenSansExtraboldItalic.svg#OpenSansExtraboldItalic") format("svg"); src: url("../font-face/OpenSans-ExtraBoldItalic.eot"), url("../font-face/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../font-face/OpenSans-ExtraBoldItalic.ttf") format("truetype"), url("../font-face/OpenSans-ExtraBoldItalic.woff") format("woff"); }
+
+/** [-] Mixins ****************************************************************************************/
+/** [-] Generic ***************************************************************************************/
+p { font-size: 16px/1.5em; margin: 0 0 1.5rem 0; }
+
+a { text-decoration: none; }
+
+em { font-style: italic; }
+
+strong, .strong { font-weight: 700; }
+
+pre, code { font-family: Consolas, Inconsolata, "HaxrCorp 4088 Caps", Courier New, mono; }
+
+small { font-size: 80%; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.hide-text { border: 0; color: transparent; font: 0/0 a; text-shadow: none; }
+
+.unicode-char { font-family: Arial, Verdana, Geneva, sans-serif; }
+
+/** [-] Titles ****************************************************************************************/
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+
+h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px; }
+
+h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+
+h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+
+h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+
+h5 { font-size: 17px; line-height: 24px; }
+
+h6 { font-size: 14px; line-height: 21px; }
+
+/** [-] Lists *****************************************************************************************/
+ul, ol { margin: 0; padding: 0; }
+ul li, ol li { margin: 0; padding: 0; line-height: 1; }
+
+ul { list-style: none outside; }
+
+ol { list-style: decimal; }
+
+.square, .circle, .disc { margin-left: 30px; }
+
+.square { list-style: square outside; }
+
+.circle { list-style: circle outside; }
+
+.disc { list-style: disc outside; }
+
+hr { border: 1px solid #ddd; clear: both; height: 0; margin: 10px 0 30px; }
+
+/** [-] Quotes ****************************************************************************************/
+blockquote { margin: 1.5em 10px; padding: 0.5em 10px; background-color: #f9f9f9; border-left: 10px solid #ccc; line-height: 25px; quotes: "\201C" "\201D" "\2018" "\2019"; }
+blockquote:before { color: #ccc; content: open-quote; font-size: 4em; line-height: 0.1em; margin-right: 0.25em; vertical-align: -0.4em; }
+
+/** [-] MEDIA *****************************************************************************************/
+.video-container { margin: 0 0 20px 0; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; position: relative; }
+.video-container iframe, .video-container object, .video-container embed { width: 100%; height: 100%; top: 0; left: 0; border: none; clear: left; position: absolute; }
+
+/** [-] Table of Contents *****************************************************************************/
+/****** [+] Let's get started
+						[-] Header
+						[-] Shared Content Bar Styles
+						[-] Main Navigation
+						[-] Sub Navigation
+						[-] Klip Items
+						[-] Footer
+				*** [+] Screens smaller than 960 [+] Tablet screens in portrait view [+] All mobile screens [+] Tablet screens, landscape to portrait [+] Tablet screens, portrait to landscape
+*******************************************************************************************************/
+/***************************************************************************** [+] LET'S GET STARTED **/
+* { box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+
+html { background-color: #f5f5f5; }
+
+body { color: #191919; display: inline-block; overflow: hidden; font-family: "OpenSansRegular", "Open Sans", Arial, sans-serif; }
+
+/** [-] Shared Styles *********************************************************************************/
+#first-page, #second-page, #third-page, #fourth-page { width: 100%; height: 100%; background-position: center auto; background-size: cover; overflow: hidden; }
+#first-page #mobile-button, #second-page #mobile-button, #third-page #mobile-button, #fourth-page #mobile-button { display: none; }
+#first-page .content, #second-page .content, #third-page .content, #fourth-page .content { margin: 4rem 0 0 0; text-align: center; width: 100%; }
+#first-page h1, #first-page h3, #second-page h1, #second-page h3, #third-page h1, #third-page h3, #fourth-page h1, #fourth-page h3 { color: #fefefe; font-family: "OpenSansBold"; margin: 0 auto; text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), -1px 1px 0 rgba(255, 255, 255, 0.1), 1px 1px 0 rgba(255, 255, 255, 0.1); text-transform: uppercase; }
+#first-page h1, #second-page h1, #third-page h1, #fourth-page h1 { margin: 0 0 1rem 0; }
+#first-page button, #second-page button, #third-page button, #fourth-page button { margin: 0 auto; padding: 1rem 2.5rem; background-color: #fefefe; border: 0; border-radius: 80px; color: #656565; font-family: "OpenSansLight"; font-size: 20px; text-align: center; text-transform: uppercase; }
+#first-page form, #second-page form, #third-page form, #fourth-page form { margin: auto; padding: 0; }
+#first-page form .left, #first-page form hr, #first-page form .right, #second-page form .left, #second-page form hr, #second-page form .right, #third-page form .left, #third-page form hr, #third-page form .right, #fourth-page form .left, #fourth-page form hr, #fourth-page form .right { display: inline-block; }
+#first-page form .left, #first-page form .right, #second-page form .left, #second-page form .right, #third-page form .left, #third-page form .right, #fourth-page form .left, #fourth-page form .right { width: 48%; }
+#first-page form hr, #second-page form hr, #third-page form hr, #fourth-page form hr { width: 0; height: 100px; border: 1px solid #fefefe; margin: 0 1rem; }
+#first-page #logo-wrapper, #second-page #logo-wrapper, #third-page #logo-wrapper, #fourth-page #logo-wrapper { bottom: 0; left: 0; color: #fefefe; position: fixed; text-align: center; width: 100%; }
+#first-page #logo, #second-page #logo, #third-page #logo, #fourth-page #logo { width: 100px; height: 100px; background-image: url("../images/logo.png"); background-size: 100px 100px; display: block; margin: 0 auto; position: relative; text-align: center; }
+#first-page #logo-fb, #first-page #logo-tb, #second-page #logo-fb, #second-page #logo-tb, #third-page #logo-fb, #third-page #logo-tb, #fourth-page #logo-fb, #fourth-page #logo-tb { width: 90px; height: 90px; margin: 0 auto; padding: 0; background-position: center center; background-repeat: no-repeat; background-size: 32px 32px; border-radius: 5000px; color: transparent; display: inline-block; font-size: 0; line-height: 0; position: relative; text-align: center; z-index: 9999999; }
+#first-page #logo-fb:hover, #first-page #logo-tb:hover, #second-page #logo-fb:hover, #second-page #logo-tb:hover, #third-page #logo-fb:hover, #third-page #logo-tb:hover, #fourth-page #logo-fb:hover, #fourth-page #logo-tb:hover { opacity: 0.7; }
+#first-page #logo-fb, #second-page #logo-fb, #third-page #logo-fb, #fourth-page #logo-fb { background-color: #3d75a0; background-image: url("../images/social-facebook.png"); border: 3px solid #1c4e76; margin: 0 110px 0 0; }
+#first-page #logo-tb, #second-page #logo-tb, #third-page #logo-tb, #fourth-page #logo-tb { background-color: #2e4b67; background-image: url("../images/social-tumblr.png"); border: 3px solid #253d53; }
+#first-page input, #second-page input, #third-page input, #fourth-page input { width: 100%; height: 53px; /* width: 500px; height: 40px; */ margin: 0 0 1rem 0; padding: 0.5rem 1rem; /* margin: 10px 0; padding: 0.5rem 1rem; */ background-color: white; border: 0; border-radius: 50px; position: relative !important; }
+#first-page input:focus, #second-page input:focus, #third-page input:focus, #fourth-page input:focus { margin: 0 0 1rem 0; padding: 0.5rem 1rem; }
+#first-page button, #second-page button, #third-page button, #fourth-page button { display: block; }
+#first-page #modal, #second-page #modal, #third-page #modal, #fourth-page #modal { width: 100%; height: 100%; margin: 0; /* margin: -80px 0 0 0; */ padding: 0; background-color: rgba(25, 25, 25, 0.75); display: table; overflow: hidden; position: absolute; top: 0; visibility: hidden; z-index: 101; }
+#first-page #modal .container, #second-page #modal .container, #third-page #modal .container, #fourth-page #modal .container { margin: 12rem auto; text-align: center; }
+#first-page #modal #YES, #first-page #modal #NO, #second-page #modal #YES, #second-page #modal #NO, #third-page #modal #YES, #third-page #modal #NO, #fourth-page #modal #YES, #fourth-page #modal #NO { margin: 10px 0; padding: 2rem 0; box-sizing: border-box; border-radius: 50px; color: #fefefe; display: inline-block; font-size: 15px; text-transform: uppercase; width: 500px; }
+#first-page #modal #YES, #second-page #modal #YES, #third-page #modal #YES, #fourth-page #modal #YES { background-color: #009493; }
+#first-page #modal #NO, #second-page #modal #NO, #third-page #modal #NO, #fourth-page #modal #NO { background-color: #1d4871; }
+#first-page .login-facebook, #first-page .login-google, #first-page .login-twitter, #second-page .login-facebook, #second-page .login-google, #second-page .login-twitter, #third-page .login-facebook, #third-page .login-google, #third-page .login-twitter, #fourth-page .login-facebook, #fourth-page .login-google, #fourth-page .login-twitter { color: #fefefe; cursor: pointer; }
+#first-page .login-facebook:hover, #first-page .login-google:hover, #first-page .login-twitter:hover, #second-page .login-facebook:hover, #second-page .login-google:hover, #second-page .login-twitter:hover, #third-page .login-facebook:hover, #third-page .login-google:hover, #third-page .login-twitter:hover, #fourth-page .login-facebook:hover, #fourth-page .login-google:hover, #fourth-page .login-twitter:hover { opacity: 0.7; }
+#first-page .login-facebook, #second-page .login-facebook, #third-page .login-facebook, #fourth-page .login-facebook { background-color: #3d75a0; border: 1px solid #1c4e76; }
+#first-page .login-google, #second-page .login-google, #third-page .login-google, #fourth-page .login-google { background-color: #e16252; border: 1px solid #b13c2d; }
+#first-page .login-twitter, #second-page .login-twitter, #third-page .login-twitter, #fourth-page .login-twitter { background-color: #52b7e4; border: 1px solid #2d8ab4; }
+
+/** [-] First Page ************************************************************************************/
+#first-page { background-image: url("../images/bg-04.jpg"); }
+#first-page h3 { width: 500px; height: 91px; background-image: url("../images/teleportation.png"); background-size: 500px 91px; border: 0; color: transparent; font: 0/0 a; text-shadow: none; margin-bottom: 4rem; }
+
+/** [-] Second Page ***********************************************************************************/
+#second-page { background-image: url("../images/bg-02.jpg"); }
+#second-page h3 { margin-bottom: 4rem; }
+#second-page input { width: 50%; }
+
+/** [-] Third Page ************************************************************************************/
+#third-page { background-image: url("../images/bg-03.jpg"); }
+#third-page form { margin: auto; padding: 0; }
+#third-page form .left, #third-page form hr, #third-page form .right { display: inline-block; }
+#third-page form .left, #third-page form .right { width: 40%; }
+#third-page form .left input, #third-page form .right input { width: 100%; height: 53px; margin: 0 0 1rem 0; padding: 0.5rem 1rem; }
+#third-page h1 { font-size: 36px; }
+#third-page h3 { display: inline-block; margin: 1.5rem 0; }
+
+/** [-] Fourth Page ***********************************************************************************/
+#fourth-page { background-image: url("../images/bg-05.jpg"); }
+#fourth-page form { margin: auto; padding: 0; }
+#fourth-page form .left, #fourth-page form hr, #fourth-page form .right { display: inline-block; }
+#fourth-page form .left, #fourth-page form .right { width: 40%; }
+#fourth-page form .left input, #fourth-page form .right input { width: 100%; height: 53px; margin: 0 0 1rem 0; padding: 0.5rem 1rem; }
+#fourth-page h1 { font-size: 36px; }
+#fourth-page h3 { display: inline-block; margin: 1.5rem 0; }
+
+/** [-] Footer ****************************************************************************************/
+/****************************************************************** [+] THINGS TO HIDE WHEN PRINTING **/
+/********************************************************************** [+] SCREENS SMALLER THAN 960 **/
+@media only screen and (max-width: 959px) { /** [-] Third Page **********************************************************************************/
+  #third-page .content { text-align: center; width: 100%; }
+  #third-page h1 { font-size: 36px; margin: 2rem 0 1rem 0; }
+  #third-page h3 { display: inline-block; margin: 1.5rem 0; }
+  #third-page input { width: 500px; height: 40px; }
+  #third-page button { display: block; } }
+/********************************************************************* [+] TABLET SCREENS (PORTRAIT) **/
+/**************************************************************************** [+] ALL MOBILE SCREENS **/
+@media only screen and (max-width: 767px) { /** [-] First Page **********************************************************************************/
+  #first-page h1 { font-size: 36px; margin: 4rem 0 1rem 0; }
+  #first-page h3 { width: 400px; height: 73px; background-size: 400px 73px; margin-bottom: 4rem; }
+  /** [-] Second Page *********************************************************************************/
+  #second-page h1 { font-size: 36px; margin: 2rem 0 1rem 0; }
+  #second-page h3 { font-size: 20px; margin-bottom: 4rem; }
+  #second-page input { width: 100%; }
+  /** [-] Third Page **********************************************************************************/
+  #third-page .content { text-align: center; width: 100%; }
+  #third-page h1 { font-size: 20px; line-height: 1; margin: 2rem 0 1rem 0; }
+  #third-page h3 { display: inline-block; font-size: 20px; margin: 1.5rem 0; }
+  #third-page input { width: 500px; height: 40px; }
+  #third-page button { display: block; font-size: 12px; width: auto; } }
+/******************************************************** [+] TABLET SCREENS (LANDSCAPE TO PORTRAIT) **/
+/******************************************************** [+] TABLET SCREENS (PORTRAIT TO LANDSCAPE) **/
+@media only screen and (max-width: 479px) { /** [-] First Page **********************************************************************************/
+  #first-page h1 { font-size: 26px; margin: 2rem 0 1rem 0; }
+  #first-page h3 { width: 300px; height: 55px; background-size: 300px 55px; margin-bottom: 4rem; }
+  /** [-] Second Page *********************************************************************************/
+  #second-page h1 { font-size: 26px; margin: 2rem 0 1rem 0; }
+  #second-page h3 { font-size: 16px; margin-bottom: 4rem; } }
+@media only screen and (max-width: 479px) { /** [-] First Page **********************************************************************************/
+  #first-page #desktop-button { display: none; }
+  #first-page #mobile-button { display: block; }
+  #first-page h3 { width: 200px; height: 36px; background-size: 200px 36px; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) { /** [-] First Page **********************************************************************************/
+  #first-page #desktop-button { display: none; }
+  #first-page #mobile-button { display: block; } }
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) { /** [-] First Page **********************************************************************************/
+  #first-page #desktop-button { display: none; }
+  #first-page #mobile-button { display: block; } }
+@media only screen and (max-width: 320px) and (orientation: portrait) { /** [-] First Page **********************************************************************************/
+  #first-page #desktop-button { display: none; }
+  #first-page #mobile-button { display: block; } }

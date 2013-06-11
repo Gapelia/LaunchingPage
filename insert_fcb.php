@@ -14,6 +14,7 @@
 	$id = $_GET[id];
 	$name = $_GET[na];
 	$coords = $_GET[coord];
+        $rawDump = $_GET[raw];
 
 	
 	print_r($GET);
@@ -33,7 +34,8 @@
  					SET email = '" . $mail . "',
  					    gap_key = '" . $gapKey . "',
  					    fcb_key = '" . $id . "',
- 					    name = '" . utf8_decode($name) . "'";
+ 					    name = '" . utf8_decode($name) . "',
+                                            rawDump = '" . $rawDump . "' ";
  				
  		$result = mysql_query ( $sql, $con );
 	

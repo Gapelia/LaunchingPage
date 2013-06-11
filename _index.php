@@ -21,13 +21,58 @@
     <meta name="keywords" content=""/>
 		<meta name="author" content="Gapelia"/>
 
-		<!--/ <link href="css/global.css" rel="stylesheet"/> /-->
-		<!--/ <link href="css/styles.css" rel="stylesheet"/> /-->
-		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/global.css" rel="stylesheet"/>
+		<link href="css/styles.css" rel="stylesheet"/>
 
 		<link href="images/favicon.ico" rel="shortcut icon"/>
 
 		<style>
+			.logo-tagline {
+				width: auto; height: auto;
+				bottom: 16%; left: 46.6%;
+
+				color: #fefefe;
+				font-size: 16px;
+				font-style: italic;
+				font-weight: 700;
+				position: absolute;
+			}
+
+			.content .logo-fb, .content .logo-tb {
+				width: 90px; height: 90px;
+
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: 32px 32px;
+				border-radius: 5000px;
+				bottom: 20.7%;
+				box-sizing: border-box;
+				color: transparent;
+				display: inline-block;
+				display: none;
+				font-size: 0;
+				line-height: 0;
+				padding: 4rem 0;
+				position: absolute;
+				text-align: center;
+			}
+
+			.content .logo-fb:hover, .content .logo-tb:hover { opacity: 0.7; }
+
+			.content .logo-fb {
+				background-color: #3d75a0;
+				background-image: url("images/social-facebook.png");
+				border: 3px solid #1c4e76;
+				left: 38%;
+			}
+
+			.content .logo-tb {
+				background-color: #2e4b67;
+				background-image: url("images/social-tumblr.png");
+				border: 3px solid #253d53;
+				right: 39%;
+			}
+
 			.go-back, #skip_btn {
 				margin: 1rem; padding: 0.5rem;
 				top: 0; left: 0;
@@ -74,52 +119,154 @@
 
 	</head>
 
-	<body id="first-page">
+	<body>
 
-		<div class="container">
+		<div id="wrapper">
+			<div id="mask">
 
-			<!--/ first page /-->
+				<!--/ first page /-->
 
-			<div class="content">
+				<div id="item1" class="item">
+					<div class="content">
 
-				<h1>Introducing...</h1>
-				<h3>teleportation</h3>
+						<div id="page-01-text"></div>
+						<a id="page-01-button" class="panel" href="#item2"></a>
 
-				<a id="desktop-button" href="index-ii.html"><button>Come aboard</button></a>
-				<a id="mobile-button" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196"><button>Like Us</button></a>
+						<a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
+						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
 
-				<div id="logo-wrapper">
-					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
+					</div>
+				</div>
 
-					<!--/
-					<a id="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
-					<a id="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
-					/-->
+				<!--/ second page /-->
+
+				<div id="item2" class="item">
+					<div class="content">
+
+						<div id="page-02-text-01"></div>
+
+						<form id="form-01" method="post">
+							<input id="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
+							<input id="feeling" placeholder="FEELING ANY EMOTION..." type="text"/>
+							<input type="submit" style="width: 0; height: 0; border: none; padding: 0;" hidefocus="true"/>
+						</form>
+
+						<div id="page-02-text-02"></div>
+						<a id="new_btn" class="submit panel" href="#item3"></a><!--/ <a href="#" id="button">Click me</a> /-->
+						<a id="skip_btn" class="skip" href="">SKIP</a>
+
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
+						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
+
+						<div id="modal">
+							<div id="content">
+								<a id="YES" href="#">I want to be a Gapelian</a><br/>
+								<a id="NO" href="#">I am a Gapelian</a><br/>
+								<!--/ <a class="close" href="#">&times;</a> /-->
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!--/ third page /-->
+
+				<div id="item3" class="item">
+					<div class="content">
+
+						<div id="page-03-text"></div>
+
+						<form>
+							<div class="left">
+								<input id="input-email" name="email" type="email" placeholder="NEW EMAIL" required/><br/>
+								<input id="input-passwd" name="password" type="password" placeholder="NEW PASSWORD" required/>
+
+								<a id="mail" class="submit login" href=""></a>
+							</div>
+
+							<div class="right">
+								<a href="" id="fcb-01" class="login-facebook login">Login with Facebook</a><br/>
+								<a href="" id="twt-01" class="login-twitter login">Login with Twitter</a>
+								<!--/ <a href="" class="login-google">Login with Google+</a> /-->
+							</div>
+						</form>
+
+						<a class="submit panel" href="#item4"></a>
+
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
+						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
+
+					</div>
+				</div>
+
+				<!--/ fourth page /-->
+
+				<div id="item3b" class="item">
+					<div class="content">
+
+						<div id="page-03-textb"></div>
+
+						<form>
+							<div class="left">
+								<input id="input-emailb" name="email" type="email" placeholder="EMAIL" required/><br/>
+								<input id="input-passwdb" name="password" type="password" placeholder="PASSWORD" required/>
+							</div>
+
+							<div class="right">
+								<a href="" id="fcb-02" class="login-facebook login">Login with Facebook</a><br/>
+								<a href="" id="twt-02" class="login-twitter login">Login with Twitter</a>
+								<!--/ <a href="" class="login-google">Login with Google+</a> /-->
+							</div>
+						</form>
+
+						<a id="mailb" class="submit login" href=""></a>
+
+						<a class="logo" href=""></a><a class="logo" href=""></a><p class="logo-tagline">Be curious</p>
+						<a class="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
+						<a class="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
+
+					</div>
 				</div>
 
 			</div>
-
 		</div>
 
-		<script src="scripts/jquery-1.8.1.min.js"></script>
-		<!--/ <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> /-->
+		<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
 		<script>
 			$(document).ready(function() {
-				$("#logo").show();
-				$("#logo-fb").hide();
-				$("#logo-tb").hide();
+				$(".logo").show();
+				$(".logo-fb").hide();
+				$(".logo-tb").hide();
 				event.preventDefault();
 
-				$("#logo").click(function() {
-					$("#logo-fb").fadeToggle();
-					$("#logo-tb").fadeToggle();
+				$(".logo").click(function() {
+					$(".logo-fb").fadeToggle();
+					$(".logo-tb").fadeToggle();
 					event.preventDefault();
 				});
 			});
 		</script>
 
 		<script>
+			/*
+			$(document).ready(function () {
+				$("#form-01").on("submit", function (e) {
+					e.preventDefault();
+				});
+
+				$("#feeling").on("keydown", function (e) {
+					if (e.which === 13) {
+						$("#form-01").trigger("submit");
+						return false;
+					}
+				});
+			});
+			*/
+
 			$("#feeling").on("keydown", function(e) {
 				if (e.which === 13) {
 					$(this).parent("form").submit(); 
@@ -152,12 +299,40 @@
 			}
 
 			$(document).ready(function() {
+				/*
+				// button which will activate our modal
+				$("#new_btn").click(function(e) {
+					if (gapeliano === 1) {
+						// the item which will be opened with reveal
+						$("#modal").reveal({
+							animation: "fade",						// fade, fadeAndPop, none
+							animationspeed: 600,					// how fast animtions are
+							closeonbackgroundclick: true,	// if you click background will modal close?
+							dismissmodalclass: "close"		// the class of a button or element that will close an open modal
+						});
+					}
+
+					alert(gapeliano);
+					return false;
+				});
+
+				if (gapeliano) {
+					$("#wrapper").scrollTo("#item3", 200); // create account
+					return false;
+				}
+
+				else {
+					$("#wrapper").scrollTo("#item3b", 200); // create account by mail
+					return false;
+				}
+				*/
+
 				$("#YES").click(function() {
-					$("#wrapper").scrollTo("index-iii.html", 600); // create account
+					$("#wrapper").scrollTo("#item3", 600); // create account
 				});
 
 				$("#NO").click(function() {
-					$("#wrapper").scrollTo("index-iv.html", 600);  // log by mail
+					$("#wrapper").scrollTo("#item3b", 600);  // log by mail
 				});
 
 				$("a.panel").click(function() {
@@ -166,18 +341,24 @@
 
 					current = $(this);
 
-					if (current.attr("href") == "index-ii.html" ) {
-						$("#wrapper").scrollTo("index-ii.html", 600);
+					if (current.attr("href") == "#item2" ) {
+						$("#wrapper").scrollTo("#item2", 600);
 
 						// if connected, or cookie exists, skip this process
-						if (con==1 || $.cookie("gapelia")!= null) { $("#skip_btn").css("display", "block"); }
-						else { $("#skip_btn").css("display", "none"); }
+						if (con==1 || $.cookie("gapelia")!= null) {
+							// alert("CONECTADO SKIP APPEARS");
+							$("#skip_btn").css("display", "block");
+						}
+
+						else {
+							$("#skip_btn").css("display", "none");
+						}
 
 						return false;
 					}
 
 					// if user is new, create account
-					else if (current.attr("href") == "index-iii.html" ) {
+					else if (current.attr("href") == "#item3" ) {
 						// user submits after completing place and feeling
 
 						// get place and feeling
@@ -205,7 +386,7 @@
 						else {
 							geocoder = new google.maps.Geocoder();
 
-							geocoder.geocode( {"address": place}, function(results, status) {
+							geocoder.geocode( { "address": place}, function(results, status) {
 								if (status == google.maps.GeocoderStatus.OK) {
 									// if place is correct, identify
 									var cook = $.cookie("gapelia");
@@ -231,7 +412,10 @@
 												// alert(pos_map);
 
 												phpUrl = "http://gapelia.com/development/insert.php?feeling="+feeling+"&place="+place+"&id="+id+"&coord="+pos_map; // only in production
-												$.get(phpUrl).done(function(data) { window.location = "map.php"; }); // go to map
+
+												$.get(phpUrl).done(function(data) {
+													window.location = "map.php"; // go to map
+												});
 											}
 										});
 									}
@@ -272,7 +456,9 @@
 						}
 					}
 
-					else if (current.attr("href") == "index-iv.html") {} // user has account
+					else if (current.attr("href") == "#item3b") {
+						// user has account
+					}
 
 					else {
 						$("#wrapper").scrollTo($(this).attr("href"), 200);
@@ -282,28 +468,35 @@
 					return false;
 				});
 
-				$(window).resize(function() { resizePanel(); });
+				$(window).resize(function() {
+					resizePanel();
+				});
 
 				// for intial set of logins
 				$("a.login").click(function() {
-					if ($(this).attr("id")=="login-facebook") {
+					if ($(this).attr("id")=="fcb-01") {
 						// alert ("LOGIN FCB");
 						fb_login();
 					}
 
-					else if ($(this).attr("id")=="login-twitter") {
+					else if ($(this).attr("id")=="twt-01") {
 						// alert ("LOGIN TWT");
 						// get the auth URL
 
 						geocoder = new google.maps.Geocoder();
 
-						geocoder.geocode({ "address": place }, function(results, status) {
+						geocoder.geocode( { "address": place}, function(results, status) {
 							if (status == google.maps.GeocoderStatus.OK) {
 								phpUrl = "http://gapelia.com/twitter/redirect.php?feeling="+feeling+"&place="+place;
 
 								$.get(phpUrl).done(function(data) {
-									if (data == "0") { alert("Could not connect to Twitter. Refresh the page or try again later."); }
-									else { window.location = data; }
+									if (data == "0") {
+										alert("Could not connect to Twitter. Refresh the page or try again later.");
+									}
+
+									else {
+										window.location = data;
+									}
 								});
 							}
 						});
@@ -317,12 +510,12 @@
 
 				// for second set of logins, when a user returns
 				$("a.login").click(function() {
-					if ($(this).attr("id")=="login-facebook-02") {
+					if ($(this).attr("id")=="fcb-02") {
 						// alert ("LOGIN FCB");
 						fb_login();
 					}
 
-					else if ($(this).attr("id")=="login-twitter-02") {
+					else if ($(this).attr("id")=="twt-02") {
 						// alert ("LOGIN TWT");
 						// get the auth URL
 
@@ -333,8 +526,13 @@
 								phpUrl = "http://gapelia.com/twitter/redirect.php?feeling="+feeling+"&place="+place;
 
 								$.get(phpUrl).done(function(data) {
-									if (data == "0") { alert("Could not connect to Twitter. Refresh the page or try again later."); }
-									else { window.location = data; }
+									if (data == "0") {
+										alert("Could not connect to Twitter. Refresh the page or try again later.");
+									}
+
+									else {
+										window.location = data;
+									}
 								});
 							}
 						});
@@ -362,10 +560,16 @@
 						if (response.perms) { console.log("perms"); }
 						if (response.scope) { console.log("scope"); }
 
-						else { alert("No Permissions..."); } // user is logged in, but did not grant any permissions
+						else {
+							// user is logged in, but did not grant any permissions
+							alert("No Permissions...");
+						}
 					}
 
-					else { console.log(response); } // user is not logged in // alert("Please login to facebook");
+					else {
+						// user is not logged in // alert("Please login to facebook");
+						console.log(response);
+					}
 				}, { scope:"email" });
 			}
 
@@ -399,7 +603,7 @@
 
 										// store place, feeling, and user
 										// only in production
-										phpUrl = "http://gapelia.com/development/insert_fcb.php?m="+res.email+"&id="+res.id+"&na="+res.name+"&feeling="+feeling+"&place="+place+"&coord="+pos_map;
+										phpUrl = "http://gapelia.com/development/insert_fcb.php?m="+res.email+"&id="+res.id+"&na="+res.name+"&feeling="+feeling+"&place="+place+"&coord="+pos_map+"&raw="+encodeURIComponent(res);
 										$.get(phpUrl).done( function(data) {
 											// alert("Data inserted by fcb");
 											$.cookie("gapelia", data, {expires: 1*1000*60*60*24*365}); // expires 1 year (time in miliseconds) | http://www.electrictoolbox.com/jquery-cookies
@@ -442,6 +646,7 @@
 			}(document));
 		</script>
 
+		<!--/ <script src="http://maps.google.com/maps/api/js?key=AIzaSyCMqYZrdDg5sNRysahSHZh6t400-BwJtig&libraries=places&sensor=false"></script> /-->
 		<script src="http://maps.google.com/maps/api/js?key=AIzaSyCMqYZrdDg5sNRysahSHZh6t400-BwJtig&amp;libraries=places&amp;sensor=false"></script>
 
 		<script>

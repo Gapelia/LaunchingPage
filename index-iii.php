@@ -74,19 +74,35 @@
 
 	</head>
 
-	<body id="first-page">
+	<body id="third-page">
 
 		<div class="container">
 
-			<!--/ first page /-->
+			<!--/ third page /-->
 
 			<div class="content">
 
-				<h1>Introducing...</h1>
-				<h3>teleportation</h3>
+				<h1>You can be first in line,<br/>enter your info to reserve a seat</h1>
 
-				<a id="desktop-button" href="index-ii.html"><button>Come aboard</button></a>
-				<a id="mobile-button" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196"><button>Like Us</button></a>
+				<form>
+					<div class="left">
+						<input id="email" placeholder="Email" hidefocus="true" type="text"/>
+						<input id="password" placeholder="Password" hidefocus="true" type="password" required/>
+
+						<a href="index-iv.php"><button id="mail" class="submit login" type="submit" hidefocus="true">Submit</button></a>
+					</div>
+
+					<hr/>
+
+					<div class="right">
+						<button id="login-facebook" class="login-facebook login">Sign up with Facebook</button><br/>
+						<button id="login-twitter" class="login-twitter login">Sign up with Twitter</button>
+					</div>
+				</form>
+
+				<h3>*We promise not to spam you, pinky promise</h3>
+
+				<!--/ <a id="skip_btn" class="skip" href="">SKIP</a> /-->
 
 				<div id="logo-wrapper">
 					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
@@ -153,11 +169,11 @@
 
 			$(document).ready(function() {
 				$("#YES").click(function() {
-					$("#wrapper").scrollTo("index-iii.html", 600); // create account
+					$("#wrapper").scrollTo("index-iii.php", 600); // create account
 				});
 
 				$("#NO").click(function() {
-					$("#wrapper").scrollTo("index-iv.html", 600);  // log by mail
+					$("#wrapper").scrollTo("index-iv.php", 600);  // log by mail
 				});
 
 				$("a.panel").click(function() {
@@ -166,8 +182,8 @@
 
 					current = $(this);
 
-					if (current.attr("href") == "index-ii.html" ) {
-						$("#wrapper").scrollTo("index-ii.html", 600);
+					if (current.attr("href") == "index-ii.php" ) {
+						$("#wrapper").scrollTo("index-ii.php", 600);
 
 						// if connected, or cookie exists, skip this process
 						if (con==1 || $.cookie("gapelia")!= null) { $("#skip_btn").css("display", "block"); }
@@ -177,7 +193,7 @@
 					}
 
 					// if user is new, create account
-					else if (current.attr("href") == "index-iii.html" ) {
+					else if (current.attr("href") == "index-iii.php" ) {
 						// user submits after completing place and feeling
 
 						// get place and feeling
@@ -272,7 +288,7 @@
 						}
 					}
 
-					else if (current.attr("href") == "index-iv.html") {} // user has account
+					else if (current.attr("href") == "index-iv.php") {} // user has account
 
 					else {
 						$("#wrapper").scrollTo($(this).attr("href"), 200);
