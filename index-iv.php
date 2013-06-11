@@ -95,8 +95,8 @@
 					<hr/>
 
 					<div class="right">
-						<button id="login-facebook-02" class="login-facebook login">Login with Facebook</button><br/>
-						<button id="login-twitter-02" class="login-twitter login">Login with Twitter</button>
+						<a class="login"><button id="login-facebook-02" class="login-facebook login">Login with Facebook</button></a><br/>
+						<a class="login"><button id="login-twitter-02" class="login-twitter login">Login with Twitter</button></a>
 					</div>
 				</form>
 
