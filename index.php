@@ -85,7 +85,7 @@
 				<h1>Introducing...</h1>
 				<h3>teleportation</h3>
 
-				<a id="desktop-button" href="index-ii.html"><button>Come aboard</button></a>
+				<a id="desktop-button" href="index-ii.php"><button>Come aboard</button></a>
 				<a id="mobile-button" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&sk=app_190322544333196"><button>Like Us</button></a>
 
 				<div id="logo-wrapper">
