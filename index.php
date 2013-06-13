@@ -25,44 +25,7 @@
 		<!--/ <link href="css/styles.css" rel="stylesheet"/> /-->
 		<link href="css/style.css" rel="stylesheet"/>
 
-		<link href="images/favicon.ico" rel="shortcut icon"/>
-
-		<style>
-			.go-back, #skip_btn {
-				margin: 1rem; padding: 0.5rem;
-				top: 0; left: 0;
-
-				background-color: #191919;
-				box-sizing: border-box;
-				color: #fefefe;
-				opacity: 0.5;
-				position: absolute;
-				text-align: center;
-				width: 50px;
-			}
-
-			.close {
-				color: #fefefe;
-				font-size: 20px;
-			}
-
-			/***************************************************************/
-
-			.pac-container {
-				margin: 1rem 0 0 0; padding: 1rem 0.8rem;
-
-				background-color: #fefefe;
-				border: 0;
-				border-radius: 10px;
-				box-sizing: border-box;
-				font-family: "Open Sans", Arial, sans-serif;
-				font-size: 13px;
-			}
-
-			.pac-item {
-				margin: 0 0 0.5rem 0;
-			}
-		</style>
+		<link href="images/favicon.PNG" rel="shortcut icon"/>
 
 		<script>
 			var feeling="";

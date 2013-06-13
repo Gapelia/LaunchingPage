@@ -25,44 +25,7 @@
 		<!--/ <link href="css/styles.css" rel="stylesheet"/> /-->
 		<link href="css/style.css" rel="stylesheet"/>
 
-		<link href="images/favicon.ico" rel="shortcut icon"/>
-
-		<style>
-			.go-back, #skip_btn {
-				margin: 1rem; padding: 0.5rem;
-				top: 0; left: 0;
-
-				background-color: #191919;
-				box-sizing: border-box;
-				color: #fefefe;
-				opacity: 0.5;
-				position: absolute;
-				text-align: center;
-				width: 50px;
-			}
-
-			.close {
-				color: #fefefe;
-				font-size: 20px;
-			}
-
-			/***************************************************************/
-
-			.pac-container {
-				margin: 1rem 0 0 0; padding: 1rem 0.8rem;
-
-				background-color: #fefefe;
-				border: 0;
-				border-radius: 10px;
-				box-sizing: border-box;
-				font-family: "Open Sans", Arial, sans-serif;
-				font-size: 13px;
-			}
-
-			.pac-item {
-				margin: 0 0 0.5rem 0;
-			}
-		</style>
+		<link href="images/favicon.PNG" rel="shortcut icon"/>
 
 		<script>
 			var feeling="";
@@ -95,8 +58,8 @@
 					<hr/>
 
 					<div class="right">
-						<a class="login"><button id="login-facebook-02" class="login-facebook login">Login with Facebook</button></a><br/>
-						<a class="login"><button id="login-twitter-02" class="login-twitter login">Login with Twitter</button></a>
+						<button id="login-facebook-02" class="login-facebook login">Login with Facebook</button><br/>
+						<button id="login-twitter-02" class="login-twitter login">Login with Twitter</button>
 					</div>
 				</form>
 
@@ -172,11 +135,11 @@
 
 			$(document).ready(function() {
 				$("#YES").click(function() {
-					$("#wrapper").scrollTo("index-iii.php", 600); // create account
+					$("#wrapper").scrollTo("index-iii.html", 600); // create account
 				});
 
 				$("#NO").click(function() {
-					$("#wrapper").scrollTo("index-iv.php", 600);  // log by mail
+					$("#wrapper").scrollTo("index-iv.html", 600);  // log by mail
 				});
 
 				$("a.panel").click(function() {
@@ -185,8 +148,8 @@
 
 					current = $(this);
 
-					if (current.attr("href") == "index-ii.php" ) {
-						$("#wrapper").scrollTo("index-ii.php", 600);
+					if (current.attr("href") == "index-ii.html" ) {
+						$("#wrapper").scrollTo("index-ii.html", 600);
 
 						// if connected, or cookie exists, skip this process
 						if (con==1 || $.cookie("gapelia")!= null) { $("#skip_btn").css("display", "block"); }
@@ -196,7 +159,7 @@
 					}
 
 					// if user is new, create account
-					else if (current.attr("href") == "index-iii.php" ) {
+					else if (current.attr("href") == "index-iii.html" ) {
 						// user submits after completing place and feeling
 
 						// get place and feeling
@@ -291,7 +254,7 @@
 						}
 					}
 
-					else if (current.attr("href") == "index-iv.php") {} // user has account
+					else if (current.attr("href") == "index-iv.html") {} // user has account
 
 					else {
 						$("#wrapper").scrollTo($(this).attr("href"), 200);
