@@ -21,11 +21,31 @@
     <meta name="keywords" content=""/>
 		<meta name="author" content="Gapelia"/>
 
-		<!--/ <link href="css/global.css" rel="stylesheet"/> /-->
-		<!--/ <link href="css/styles.css" rel="stylesheet"/> /-->
 		<link href="css/style.css" rel="stylesheet"/>
+		<link href="images/favicon.PNG" rel="shortcut icon"/>
 
-		<link href="images/favicon.ico" rel="shortcut icon"/>
+		<style>
+			#social-banner {
+				width: 100%; height: auto;
+
+				background-color: rgba(254, 254, 254, 0.3);
+				bottom: 0;
+				box-sizing: border-box;
+				color: #191919;
+				font-size: 14px;
+				font-weight: 800;
+				padding: 0.2rem 0;
+				position: absolute;
+				text-align: center;
+			}
+
+			#social-banner a {
+				color: #191919;
+				text-decoration: none;
+			}
+
+			#social-banner a:hover { opacity: 0.7; }
+		</style>
 
 		<script>
 			var feeling="";
@@ -54,33 +74,30 @@
 
 				<h3>What would you choose?</h3>
 				<a id="new_btn" class="submit panel" href="index-iii.html"><button type="submit" hidefocus="true">Submit</button></a>
-				<!--/ <a href="index-iii.html"><button id="new_btn" class="submit panel" type="submit" hidefocus="true">Submit</button></a> /-->
-				<!--/ <a id="new_btn" class="submit panel" href="#item3"></a><a href="#" id="button">Click me</a> /-->
-				<!--/ <a id="skip_btn" class="skip" href="">SKIP</a> /-->
 
 				<div id="logo-wrapper">
 					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
-
-					<!--/
-					<a id="logo-fb" href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">fb</a>
-					<a id="logo-tb" href="http://gapelia.tumblr.com" target="_blank">t</a>
-					/-->
 				</div>
 
 			</div>
 
 		</div>
 
+		<div id="social-banner">
+			<a href="https://www.facebook.com/pages/Gapelia/461725877232129?id=461725877232129&amp;sk=app_190322544333196" target="_blank">Facebook</a> &middot;
+			<a href="http://gapelia.tumblr.com" target="_blank">Tumblr</a>
+		</div>
+
 		<div id="modal">
 			<div class="container">
 				<a id="YES" href="#">I want to be a Gapelian</a><br/>
 				<a id="NO" href="#">I am a Gapelian</a><br/>
-				<!--/ <a class="close" href="#">&times;</a> /-->
 			</div>
 		</div>
 
+		<!--/ scripts /-->
+
 		<script src="scripts/jquery-1.8.1.min.js"></script>
-		<!--/ <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> /-->
 
 		<script>
 			$(document).ready(function() {
