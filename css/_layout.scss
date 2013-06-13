@@ -216,10 +216,10 @@ body {
 	background-image: url("../images/bg-04.jpg");
 
 	h3 {
-		width: 500px; height: 91px;
+		width: 700px; height: 128px;
 
 		background-image: url("../images/teleportation.png");
-		background-size: 500px 91px;
+		background-size: 700px 128px;
 		@include hide-text;
 		margin-bottom: 4rem;
 	}

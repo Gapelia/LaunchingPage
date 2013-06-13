@@ -325,7 +325,7 @@ body { color: #191919; display: inline-block; overflow: hidden; font-family: "Op
 
 /** [-] First Page ************************************************************************************/
 #first-page { background-image: url("../images/bg-04.jpg"); }
-#first-page h3 { width: 500px; height: 91px; background-image: url("../images/teleportation.png"); background-size: 500px 91px; border: 0; color: transparent; font: 0/0 a; text-shadow: none; margin-bottom: 4rem; }
+#first-page h3 { width: 700px; height: 128px; background-image: url("../images/teleportation.png"); background-size: 700px 128px; border: 0; color: transparent; font: 0/0 a; text-shadow: none; margin-bottom: 4rem; }
 
 /** [-] Second Page ***********************************************************************************/
 #second-page { background-image: url("../images/bg-02.jpg"); }

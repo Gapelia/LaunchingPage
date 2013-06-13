@@ -50,7 +50,16 @@
 				font-size: 16px;
 			}
 
-			#tagline { margin: 0 0 0 1rem; }
+			#tagline {
+				width: 500px; height: 60px;
+
+				background-image: url("images/gapelia-imminent.png");
+				background-size: 500px 60px;
+				color: transparent;
+				font-size: 0;
+				line-height: 0;
+				margin: 0 0 0 1rem;
+			}
 
 			#tagline-ii {
 				float: left;
