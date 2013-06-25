@@ -89,13 +89,13 @@
 
 				<input id="place" name="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 				<input id="feeling" name="feeling" placeholder="FEELING ANY EMOTION..." type="text"/><br/>
-				<input id="with" name="with" placeholder="WITH WHOM (optional email)..." type="text"/>
+				<input id="with" name="with" placeholder="WITH WHOM (optional email)" type="text"/>
 				<input id="coord" name="coord" type="hidden"/>
 				<input id="skip" name="skip" type="hidden" value="false"/>
 
 				<h3>What would you choose?</h3>
 
-				<a id="new_btn" class="submit panel" href="#"><button type="submit" hidefocus="true" id="submitIt">Submit</button></a>
+				<a id="new_btn" class="submit panel" href="#"><input type="button" hidefocus="true" id="submitIt" value="Submit" style="font-size: 1.3em;" /></a>
 
 				<div id="logo-wrapper">
 					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
@@ -116,58 +116,56 @@
 		</form>
 
 		<script>
-                    $(document).ready(function () {
+                    $(document).ready(function () {  
+                        // Set display values based on if already logged in
+                        if ($.cookie('gapKey') == null) {
+                            $("#YES").html("Login or Register and be a Gapelian");
+                            $("#NO").css("display", "none");
+                            $("#teleport-form").attr("action", "/gapelian/new/");
+                        } else {
+                            $("#YES").html("Login or Register with a different Id");
+                            $("#NO").css("display", "inline-block");
+                            $("#teleport-form").attr("action", "/gapelian/new/");
+                        }
+                        
+                        // Change skip based on what is clicked
+                        $("#YES").click(function () {
+                            // This is not duplicate, follow logic
+                            $("#teleport-form").attr("action", "/gapelian/new/");
+                            $("#skip").val("false");
+                            $("#teleport-form").submit();
+                        });
+                        $("#NO").click(function () {
+                            $("#teleport-form").attr("action", "/gapelian/map/");
+                            $("#skip").val("true");
+                            $("#teleport-form").submit();
+                        });
+                        
                         $("#submitIt").click(function () {
-                            submitForm = true;
                             place = encodeURIComponent($("#place").val());
                             feeling = encodeURIComponent($("#feeling").val());
                             withwhom = encodeURIComponent($("#with").val());
                             if (place == "" || feeling == "") {
-                                    alert("Please enter a place and feeling");
                                     return false;
                             }
-                            if (withwhom == "") {
-                                    withwhom = "alone";
-                            }
+                            var submitIt = true;
                             geocoder = new google.maps.Geocoder();
-                            geocoder.geocode({
-                                    "address": place
-                            }, function (results, status) {
-                                if (status == google.maps.GeocoderStatus.OK) {
-                                    position_place = results[0].geometry.location;
-                                    pos_map = encodeURIComponent(position_place);
-                                    $("#coord").val(pos_map);
-                                    $("#modal").reveal({
+                            geocoder.geocode({ "address": place }, 
+                                function (results, status) {
+                                    if (status == google.maps.GeocoderStatus.OK) {
+                                        position_place = results[0].geometry.location;
+                                        pos_map = encodeURIComponent(position_place);
+                                        $("#coord").val(pos_map);
+                                        $("#modal").reveal({
                                             animation: "fade",
                                             animationspeed: 600,
                                             closeonbackgroundclick: true,
                                             dismissmodalclass: "close"
-                                    });
-                                    if ($.cookie('gapKey') == null) {
-                                            $("#YES").html("Login or Register and be a Gapelian");
-                                            $("#NO").css("display", "none");
-                                            $("#teleport-form").attr("action", "/gapelian/new/");
-                                            $("#skip").val("false");
-                                            $("#teleport-form").submit();
+                                        });
                                     } else {
-                                            $("#YES").html("Login or Register with a different Id");
-                                            $("#NO").css("display", "inline-block");
+                                        submitIt = false;
                                     }
-                                    $("#YES").click(function () {
-                                            // This is not duplicate, follow logic
-                                            $("#teleport-form").attr("action", "/gapelian/new/");
-                                            $("#skip").val("false");
-                                            $("#teleport-form").submit();
-                                    });
-                                    $("#NO").click(function () {
-                                            $("#teleport-form").attr("action", "/gapelian/map/");
-                                            $("#skip").val("true");
-                                            $("#teleport-form").submit();
-                                    });
-                                } else {
-                                    return false;
-                                }
-                            });
+                                });
                             return false;
                         });
                     });
