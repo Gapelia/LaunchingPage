@@ -35,7 +35,7 @@ require_once('class.phpmailer.php');
         $mail->SetFrom('yourfriends@gapelia.com');
         $mail->Subject = "Greetings from Gapelia";
         $mail->Body = $message;
-        $mail->AddAddress('rstabhi@gmail.com');
+        $mail->AddAddress($id);
         if(!$mail->Send())
         {
             error_log ("Mailer Error: " . $mail->ErrorInfo);
