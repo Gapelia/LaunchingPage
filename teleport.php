@@ -163,6 +163,7 @@
                                             dismissmodalclass: "close"
                                         });
                                     } else {
+                                        alert("Please enter a valid place and feeling");
                                         submitIt = false;
                                     }
                                 });
