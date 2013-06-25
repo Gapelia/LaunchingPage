@@ -23,9 +23,6 @@
             }
             $i++;
     }
-    //$marker = array_map('htmlentities',$marker);
-    //$json = html_entity_decode(json_encode($marker));
-    //error_log(json_encode($marker ));
-    echo json_encode($marker );//JSON_FORCE_OBJECT
+    echo json_encode($marker );
     return;
 ?>

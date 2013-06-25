@@ -1,7 +1,5 @@
 <?php
-    //require ("/root/pear/share/pear/Mail.php");
-    //require("class.phpmailer.php");
-    
+    // All disabled for now
     function mailIt($to, $from, $place, $feeling) {
         
     }
