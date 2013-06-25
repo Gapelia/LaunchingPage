@@ -10,14 +10,17 @@
     $gapKey = $_COOKIE["gapKey"];
     $name = '';
     
-    $skip = $_POST['skip'];
+    $skip = '';
+    if (isset($_POST['skip'])) {
+        $skip = $_POST['skip'];
+    }
     $place = '';
     $feeling = '';
     $with = '';
     $coord = '';
     $email = '';
     
-    if (isset($skip) && $skip == "true") {
+    if (isset($_POST['skip']) && $skip == "true") {
         $place = $_POST['place'];
         $feeling = $_POST['feeling'];
         $with = $_POST['with'];
