@@ -57,7 +57,7 @@
 		<div class="content">
 			<h1>You can be first in line,<br/>enter your info to reserve a seat</h1>
 
-			<form action="/map/" method="POST" id="form-map">
+			<form action="/mail/" method="POST" id="form-map">
 				<div class="left">
 					<input id="email" name="email" placeholder="Email" hidefocus="true" type="text"/>
 					<input id="password" name="password" placeholder="Password" hidefocus="true" type="password" required/>
@@ -67,7 +67,7 @@
 					<input id="coord" name="coord" type="hidden" value="<?php print $_POST["coord"] ?>" />/-->
 					<input id="loginType" name="loginType" type="hidden" value="mail" />
 					<input id="source" name="source" type="hidden" value="newGapelian" />
-					<a href="#"><button id="mail" class="submit login" type="submit" hidefocus="true">SIGN UP</button></a>
+					<a href="#"><button id="mail" class="submit login" type="button" hidefocus="true">SIGN UP</button></a>
 				</div>
 
 				<hr/>
