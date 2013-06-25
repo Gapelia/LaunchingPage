@@ -1,9 +1,7 @@
 <?php
-    // All disabled for now
-    function mailIt($to, $from, $place, $feeling) {
-        
-    }
-    function mailIt1($to, $from, $place, $feeling) {
+    require_once('class.phpmailer.php');
+    
+    function mailIt($id, $from, $place, $feeling) {
         $message = '
             <html>
             <head>
@@ -11,81 +9,35 @@
             </head>
             <body>
             <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling $feeling and is at $place</p>
+            <p>Your friend is feeling '. $feeling .' and is at '.$place.'</p>
             <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia</a></p>
-            <p>Oh! .. and you have to guess who it is?</p>
+            <p>Oh! .. and you have to guess who that friend is?</p>
+            <p><b>Yours Truely,<br><i>Gapelians</i></b></p>
             </body>
             </html>
             ';
-        
-        $from     = "yourfriends@gapelia.com";
-        $to       = $to;
-        $subject  = "Greetings from Gapelia";
-        $body     = $message;
-
-        $host     = "ssl://smtp.gmail.com";
-        $port     = "465";
-        $username = "yourfriends@gapelia.com";  //<> give errors
-        $password = "password10!";
-
-        $headers = array(
-            'From'    => $from,
-            'To'      => $to,
-            'Subject' => $subject
-        );
-        $smtp = Mail::factory('smtp', array(
-            'host'     => $host,
-            'port'     => $port,
-            'auth'     => true,
-            'username' => $username,
-            'password' => $password
-        ));
-
-        $mail = $smtp->send($to, $headers, $body);
-
-        if (PEAR::isError($mail)) {
-            error_log($mail->getMessage());
-        } else {
-            error_log("Message successfully sent!");
+        $mail = new PHPMailer(); // create a new object
+        $mail->IsSMTP(); // enable SMTP
+        $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPAuth = true; // authentication enabled
+        //$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+        $mail->SMTPSecure = 'ssl';
+        $mail->Host = "smtp.gmail.com";
+        $mail->Port = 465; // or 587
+        $mail->IsHTML(true);
+        $mail->Username = "yourfriends@gapelia.com";
+        $mail->Password = "gapelia@2013";
+        $mail->SetFrom('yourfriends@gapelia.com');
+        $mail->Subject = "Greetings from Gapelia";
+        $mail->Body = $message;
+        $mail->AddAddress('rstabhi@gmail.com');
+        if(!$mail->Send())
+        {
+            error_log ("Mailer Error: " . $mail->ErrorInfo);
         }
-    }
-
-    function mailIt2($to, $from, $place, $feeling) {
-        error_log("Trying to email");
-        $message = '
-            <html>
-            <head>
-            <title>Your friend wants to teleport with you at Gapelia</title>
-            </head>
-            <body>
-            <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling $feeling and is at $place</p>
-            <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia</a></p>
-            <p>Oh! .. and you have to guess who it is?</p>
-            </body>
-            </html>
-            ';
-        $mail = new PHPMailer();
-
-        $mail->IsSMTP();  // telling the class to use SMTP
-        $mail->SMTPAuth   = true; // SMTP authentication
-        $mail->Host       = "smtp.gmail.com"; // SMTP server
-        $mail->Port       = 465; // SMTP Port
-        $mail->Username   = "yourfriends@gapelia.com"; // SMTP account username
-        $mail->Password   = "password10!";        // SMTP account password
-
-        $mail->SetFrom('yourfriends@gapelia.com', 'John Doe'); // FROM
-        $mail->AddReplyTo('yourfriends@gapelia.com', 'John Doe'); // Reply TO
-
-        $mail->AddAddress($to, 'Gapelian Friend'); // recipient email
-
-        $mail->Subject    = "Greetings from Gapelia"; // email subject
-        $mail->Body       = $message;
-
-        if(!$mail->Send()) {
-            error_log ('Mailer error: ' . $mail->ErrorInfo);
-        } else {
-            error_log ('Message has been sent.');
+        else
+        {
+            error_log ("Message has been sent");
         }
     }
 ?>

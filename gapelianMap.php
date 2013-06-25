@@ -45,9 +45,7 @@
         
         // Mail
         $filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );
-        error_log("came here 0".$filterWith);
         if ($filterWith !== false) {
-            error_log("came here 1");
             mailIt($filterWith, $email, $place, $feeling);
         }
     }
