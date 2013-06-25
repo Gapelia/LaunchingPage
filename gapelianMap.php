@@ -49,58 +49,6 @@
             mailIt($filterWith, $email, $place, $feeling);
         }
     }
-	require 'config.php';
-	require 'gmail_mail.php';
-
-	if (!isset($_COOKIE["gapKey"])) {
-		header("Location: http://www.gapelia.com/");
-	}
-
-	// Get all details from POST data
-	$gapKey = $_COOKIE["gapKey"];
-	$name = '';
-
-	$skip = $_POST['skip'];
-	$place = '';
-	$feeling = '';
-	$with = '';
-	$coord = '';
-	$email = '';
-
-	if (isset($skip) && $skip == "true") {
-		$place = $_POST['place'];
-		$feeling = $_POST['feeling'];
-		$with = $_POST['with'];
-		$coord = $_POST['coord'];
-
-		// Get DB connection
-		$con = mysql_connect ( SERV, USER, WRD ); 
-		mysql_select_db ( MOD );
-
-		try {
-			$sql = "INSERT INTO raw_data2 SET place = '". $place ."', 
-									gap_key = '". $gapKey ."', 
-									coords = '". $coord . "', 
-									feeling = '". $feeling ."', 
-									with_whom = '". $with . "' ";
-			$result = mysql_query ( $sql, $con );
-
-			$sql="SELECT email, name FROM users2 WHERE gap_key = '" . $gapKey .  "'";
-			$result = mysql_query ( $sql, $con );
-			$fetch = mysql_fetch_assoc ( $result );
-			$email = $fetch ['email'];
-		} catch (Exception $e) {
-			error_log($e);
-		}
-
-		// Mail
-		$filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );
-		error_log("came here 0".$filterWith);
-		if ($filterWith !== false) {
-			error_log("came here 1");
-			mailIt($filterWith, $email, $place, $feeling);
-		}
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
