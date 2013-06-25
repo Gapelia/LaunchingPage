@@ -9,10 +9,10 @@
             </head>
             <body>
             <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling '. $feeling .' and is at '.$place.'</p>
+            <p>Your friend is feeling '. $feeling .' and is in '.$place.'</p>
             <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia</a></p>
-            <p>Oh! .. and you have to guess who that friend is?</p>
-            <p><b>Yours Truely,<br><i>Gapelians</i></b></p>
+            <p>Oh! .. and you have to guess who that friend is!</p>
+            <p><b>Yours Truly,<br><i>Gapelians</i></b></p>
             </body>
             </html>
             ';
