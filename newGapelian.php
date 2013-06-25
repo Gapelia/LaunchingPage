@@ -97,7 +97,6 @@
 		<script src="http://gapelia.com/scripts/jquery.scrollTo.js"></script>
 		<script src="http://gapelia.com/scripts/md5.js"></script>
 		<script src="http://gapelia.com/scripts/cookie.js"></script>
-		<script src="http://gapelia.com/scripts/functions.js"></script>
 		<script src="http://gapelia.com/scripts/jquery.reveal.js"></script>
 		<script src="https://raw.github.com/placemarker/jQuery-MD5/master/jquery.md5.js"></script>
 		<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
@@ -109,12 +108,23 @@
 				$.cookie("with", "<?php print $_POST["with"] ?>", {path: '/'});
 				$.cookie("coord", "<?php print $_POST["coord"] ?>", {path: '/'});
 			}
+                        
+                        function validEmail(v) {
+                            var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+                            return (v.match(r) == null) ? false : true;
+                        }
 
 			$(document).ready(function () {
 				$("#mail").click(function () {
 					setCookies();
+                                        var em = $("#email");
+                                        var pw = $("#password")
+                                        if (!validEmail(em) || (pw == undefined) || (pw == "")) {
+                                            return false;
+                                        }
+                                        if ($("#email"))
 					$("#loginType").val("mail");
-					$("#password").val($.md5($("password").val()));
+					$("#password").val($.md5($("#password").val()));
 					$("#form-map").attr("action", "/mail/");
 					$("#form-map").submit();
 				});
