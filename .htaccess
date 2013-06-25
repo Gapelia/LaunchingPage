@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule    ^images - [L,NC]
+RewriteRule    ^css - [L,NC]
+RewriteRule    ^/?$             /index.php [L]
+RewriteRule    ^places/?$       /places.php [L]
+RewriteRule    ^facebook/?$     /facebook_login.php [L]
+RewriteRule    ^mail/?$         /mail_login.php [L]
+RewriteRule    ^google/?$       /google_login.php [L]
+RewriteRule    ^teleport/?$     /teleport.php [L]
+RewriteRule    ^gapelian/new/?$     /newGapelian.php [L]
+RewriteRule    ^gapelian/login/?$   /oldGapelian.php [L]
+RewriteRule    ^gapelian/map/?$     /gapelianMap.php [L]
+ErrorDocument   404 /404.php
+#RewriteRule    ^(.*)?$    /404.php [L]
