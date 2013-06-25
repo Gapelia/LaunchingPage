@@ -152,7 +152,7 @@
 								$("#teleport-form").submit();
 							} else {
 								$("#YES").html("Login or Register with a different Id");
-								$("#NO").css("display", "block");
+								$("#NO").css("display", "inline-block");
 							}
 							$("#YES").click(function () {
 								// This is not duplicate, follow logic
