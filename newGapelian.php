@@ -104,22 +104,10 @@
 
 		<script>
 			function setCookies() {
-				$.cookie("place", "<?php print $_POST["
-					place "] ?>", {
-						path: '/'
-					});
-				$.cookie("feeling", "<?php print $_POST["
-					feeling "] ?>", {
-						path: '/'
-					});
-				$.cookie("with", "<?php print $_POST["
-					with "] ?>", {
-						path: '/'
-					});
-				$.cookie("coord", "<?php print $_POST["
-					coord "] ?>", {
-						path: '/'
-					});
+				$.cookie("place", "<?php print $_POST["place"] ?>", {path: '/'});
+				$.cookie("feeling", "<?php print $_POST["feeling"] ?>", {path: '/'});
+				$.cookie("with", "<?php print $_POST["with"] ?>", {path: '/'});
+				$.cookie("coord", "<?php print $_POST["coord"] ?>", {path: '/'});
 			}
 
 			$(document).ready(function () {
