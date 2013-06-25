@@ -67,7 +67,7 @@
 					<input id="coord" name="coord" type="hidden" value="<?php print $_POST["coord"] ?>" />/-->
 					<input id="loginType" name="loginType" type="hidden" value="mail" />
 					<input id="source" name="source" type="hidden" value="newGapelian" />
-					<a href="#"><button id="mail" class="submit login" type="button" hidefocus="true">SIGN UP</button></a>
+					<a href="#"><input id="mail" class="submit login" type="button" hidefocus="true" style="font-size: 1.3em;" value="SIGN UP"/></a>
 				</div>
 
 				<hr/>
@@ -117,12 +117,11 @@
 			$(document).ready(function () {
 				$("#mail").click(function () {
 					setCookies();
-                                        var em = $("#email");
-                                        var pw = $("#password")
+                                        var em = $("#email").val();
+                                        var pw = $("#password").val();
                                         if (!validEmail(em) || (pw == undefined) || (pw == "")) {
                                             return false;
                                         }
-                                        if ($("#email"))
 					$("#loginType").val("mail");
 					$("#password").val($.md5($("#password").val()));
 					$("#form-map").attr("action", "/mail/");
