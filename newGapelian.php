@@ -109,17 +109,19 @@
 				$.cookie("coord", "<?php print $_POST["coord"] ?>", {path: '/'});
 			}
                         
-                        function validEmail(v) {
-                            var r = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
-                            return (v.match(r) == null) ? false : true;
+                        function IsEmail(email) {
+                            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                            return regex.test(email);
                         }
-
+                        
 			$(document).ready(function () {
 				$("#mail").click(function () {
 					setCookies();
                                         var em = $("#email").val();
                                         var pw = $("#password").val();
-                                        if (!validEmail(em) || (pw == undefined) || (pw == "")) {
+                                        var isMail = IsEmail(em);
+                                        if (!isMail || (pw == undefined) || (pw == "")) {
+                                            alert("Please enter a valid email and password");
                                             return false;
                                         }
 					$("#loginType").val("mail");
