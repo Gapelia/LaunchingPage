@@ -89,13 +89,16 @@
 
 				<input id="place" name="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 				<input id="feeling" name="feeling" placeholder="FEELING ANY EMOTION..." type="text"/><br/>
-				<input id="with" name="with" placeholder="WITH WHOM (email)" type="text"/>
+				<input id="with" name="with" placeholder="WITH SOMEBODY (insert email)" type="text"/>
 				<input id="coord" name="coord" type="hidden"/>
 				<input id="skip" name="skip" type="hidden" value="false"/>
 
 				<h3>What would you choose?</h3>
 
-				<a id="new_btn" class="submit panel" href="#"><input type="button" hidefocus="true" id="submitIt" value="Submit" style="font-size: 1.3em;" /></a>
+				<a class="submit panel" href="#" id="submitIt">
+<!--                                    <input type="button" hidefocus="true" id="submitIt" value="Submit" style="font-size: 1.3em;" />-->
+                                    <h2 style="color:#FFF;margin-top:-50px;">GO</h2>
+                                </a>
 
 				<div id="logo-wrapper">
 					<a id="logo" href=""></a><p class="logo-tagline">Be curious</p>
