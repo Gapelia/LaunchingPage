@@ -2,13 +2,10 @@ Options +FollowSymLinks
 RewriteEngine on
 
 # redirect from non www. domain to www. to prevent duplicate listings for SEO
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^yoursite\.com$ [NC]
-RewriteRule ^(.*)$ http://www.yoursite.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^gapelia\.com$ [NC] 
+RewriteRule ^(.*)$ http://www.gapelia.com/$1 [R=301,L]
 
 # Anti XSS protection
-Options +FollowSymLinks
-RewriteEngine On
 RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
 RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
 RewriteCond %{QUERY_STRING} (\<|%3C).*iframe.*(\>|%3E) [NC,OR]
@@ -19,14 +16,12 @@ RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* - [F]
 
 # Anti cross site tracing - protection
-RewriteEngine On
 RewriteCond %{REQUEST_METHOD} ^TRACE
 RewriteRule .* - [F]
 
 # prevent image theft / hotlinking
-RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?yoursite.com.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?gapelia.com/.*$ [NC]
 RewriteCond %{HTTP_USER_AGENT} !(googlebot-image|msnbot|psbot|yahoo-mmcrawler|cavalla_bot) [NC]
 RewriteRule \.(gif|jpg)$ - [F]
 
