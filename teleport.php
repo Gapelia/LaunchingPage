@@ -150,7 +150,7 @@
                         });
                         
                         $("#submitIt").click(function () {
-                            place = encodeURIComponent($("#place").val());
+                            place = ($("#place").val());
                             feeling = encodeURIComponent($("#feeling").val());
                             withwhom = $("#with").val();
                             if (place == "") {
