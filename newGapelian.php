@@ -59,22 +59,25 @@
 
 			<form action="/mail/" method="POST" id="form-map">
 				<div class="left">
+                                    <!--
 					<input id="email" name="email" placeholder="Email" hidefocus="true" type="text"/>
 					<input id="password" name="password" placeholder="Password" hidefocus="true" type="password" required/>
 					<!--/<input id="place" name="place" type="hidden" value="<?php print $_POST["place"] ?>"/>
 					<input id="feeling" name="feeling" type="hidden" value="<?php print $_POST["feeling"] ?>" />
 					<input id="with" name="with" type="hidden" value="<?php print $_POST["with"] ?>" />
 					<input id="coord" name="coord" type="hidden" value="<?php print $_POST["coord"] ?>" />/-->
+                                        <!--
 					<input id="loginType" name="loginType" type="hidden" value="mail" />
 					<input id="source" name="source" type="hidden" value="newGapelian" />
 					<a href="#"><input id="mail" class="submit login" type="button" hidefocus="true" style="font-size: 1.3em;" value="SIGN UP"/></a>
+                                        -->
+                                        <button id="login-google" class="login-google login">Sign up with Google</button>
 				</div>
 
 				<hr/>
 
 				<div class="right">
 					<button id="login-facebook" class="login-facebook login">Sign up with Facebook</button><br/>
-					<button id="login-google" class="login-google login">Sign up with Google+</button>
 				</div>
 			</form>
 

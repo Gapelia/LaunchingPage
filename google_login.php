@@ -10,14 +10,14 @@ require_once('class.phpmailer.php');
         $message = '
             <html>
             <head>
-            <title>Your friend wants to teleport with you at Gapelia</title>
+            <title>Your Friend Just Teleported!</title>
             </head>
             <body>
             <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling '. $feeling .' and is in '.$place.'</p>
-            <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia</a></p>
+            <p>Your friend is feeling '.$feeling.' in '.$place.', right now.</p>
+            <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia.com</a></p>
             <p>Oh! .. and you have to guess who that friend is!</p>
-            <p><b>Yours Truly,<br><i>Gapelians</i></b></p>
+            <p>Yours Truly,<br><b><i>The Gapelian Team</i></b></p>
             </body>
             </html>
             ';
@@ -32,8 +32,8 @@ require_once('class.phpmailer.php');
         $mail->IsHTML(true);
         $mail->Username = "yourfriends@gapelia.com";
         $mail->Password = "gapelia@2013";
-        $mail->SetFrom('yourfriends@gapelia.com');
-        $mail->Subject = "Greetings from Gapelia";
+        $mail->SetFrom('yourfriends@gapelia.com', 'Gapelia Inc.');
+        $mail->Subject = "Your Friend Just Teleported!";
         $mail->Body = $message;
         $mail->AddAddress($id);
         if(!$mail->Send())

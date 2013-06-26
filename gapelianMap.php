@@ -355,7 +355,7 @@
 							});
 
 							infowindows[i] = new google.maps.InfoWindow({
-								content: "Feelings here: " + position_feeling[i]
+								content: position_feeling[i]
 							});
 							google.maps.event.addListener(markers[i], 'click', function (i) {
 								return function () {

@@ -89,7 +89,7 @@
 
 				<input id="place" name="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 				<input id="feeling" name="feeling" placeholder="FEELING ANY EMOTION..." type="text"/><br/>
-				<input id="with" name="with" placeholder="WITH WHOM (optional email)" type="text"/>
+				<input id="with" name="with" placeholder="WITH WHOM (email)" type="text"/>
 				<input id="coord" name="coord" type="hidden"/>
 				<input id="skip" name="skip" type="hidden" value="false"/>
 
@@ -116,6 +116,11 @@
 		</form>
 
 		<script>
+                    function IsEmail(email) {
+                            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                            return regex.test(email);
+                        }
+                        
                     $(document).ready(function () {  
                         // Set display values based on if already logged in
                         if ($.cookie('gapKey') == null) {
@@ -144,9 +149,18 @@
                         $("#submitIt").click(function () {
                             place = encodeURIComponent($("#place").val());
                             feeling = encodeURIComponent($("#feeling").val());
-                            withwhom = encodeURIComponent($("#with").val());
-                            if (place == "" || feeling == "") {
-                                    return false;
+                            withwhom = $("#with").val();
+                            if (place == "") {
+                                alert("Please enter a valid place");
+                                return false;
+                            } 
+                            if (feeling == "") {
+                                alert("Please enter a valid feeling");
+                                return false;
+                            }
+                            if (!IsEmail(withwhom)) {
+                                alert("Please enter a valid email");
+                                return false;
                             }
                             var submitIt = true;
                             geocoder = new google.maps.Geocoder();
@@ -163,7 +177,7 @@
                                             dismissmodalclass: "close"
                                         });
                                     } else {
-                                        alert("Please enter a valid place and feeling");
+                                        alert("Please enter a valid place");
                                         submitIt = false;
                                     }
                                 });
