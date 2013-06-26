@@ -89,7 +89,7 @@
 
 				<input id="place" name="place" placeholder="ANYWHERE IN THE WORLD..." type="text"/><br/>
 				<input id="feeling" name="feeling" placeholder="FEELING ANY EMOTION..." type="text"/><br/>
-				<input id="with" name="with" placeholder="WITH SOMEBODY (insert email)" type="text"/>
+				<input id="with" name="with" placeholder="WITH SOMEBODY (insert your friend's email)" type="text"/>
 				<input id="coord" name="coord" type="hidden"/>
 				<input id="skip" name="skip" type="hidden" value="false"/>
 
@@ -162,8 +162,7 @@
                                 return false;
                             }
                             if (!IsEmail(withwhom)) {
-                                alert("Please enter a valid email");
-                                return false;
+                                $("#with").val("");
                             }
                             var submitIt = true;
                             geocoder = new google.maps.Geocoder();

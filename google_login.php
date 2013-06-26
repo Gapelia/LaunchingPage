@@ -24,7 +24,7 @@ require_once('class.phpmailer.php');
         $mail->Username = "yourfriends@gapelia.com";
         $mail->Password = "gapelia@2013";
         $mail->SetFrom('yourfriends@gapelia.com', 'Gapelia Inc.');
-        $mail->Subject = "Your Friend Just Teleported!";
+        $mail->Subject = $name." Just Teleported!";
         $mail->Body = $message;
         $mail->AddAddress($id);
         if(!$mail->Send())
