@@ -31,6 +31,7 @@
         $email = $user_profile['email'];
         $id = $user_profile['id'];
         $name = $user_profile['name'];
+        $given_name = $user_profile['first_name'];
 
         // Get DB connection
         $con = mysql_connect ( SERV, USER, WRD ); 
@@ -55,6 +56,7 @@
                     SET email = '" . $email . "',
                         gap_key = '" . $gapKey . "',
                         ext_key = '" . $id . "',
+                        given_name = '" . utf8_decode($given_name) ."',
                         name = '" . utf8_decode($name) . "',
                         raw = '" . $user_profile_string . "' ";
                 $result = mysql_query ( $sql, $con );
@@ -74,12 +76,12 @@
 
         // Set some new cookies
         setcookie('gapKey', $gapKey, time() + (86400 * 365), "/"); // 86400 = 1 day
-        setcookie('name', $name, time() + (86400 * 365), "/");
+        setcookie('name', $given_name, time() + (86400 * 365), "/");
 
         // Mail
         $filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );
         if ($filterWith !== false) {
-            mailIt($filterWith, $email, $place, $feeling);
+            mailIt($filterWith, $email, $place, $feeling, $given_name);
         }
 
         // Redirect to map now

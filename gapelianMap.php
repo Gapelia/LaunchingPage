@@ -8,7 +8,7 @@
 
     // Get all details from POST data
     $gapKey = $_COOKIE["gapKey"];
-    $name = '';
+    $name = $_COOKIE["name"];
     
     $skip = '';
     if (isset($_POST['skip'])) {
@@ -49,7 +49,7 @@
         // Mail
         $filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );
         if ($filterWith !== false) {
-            mailIt($filterWith, $email, $place, $feeling);
+            mailIt($filterWith, $email, $place, $feeling, $name);
         }
     }
 ?>

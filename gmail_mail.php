@@ -1,21 +1,12 @@
 <?php
     require_once('class.phpmailer.php');
     
-    function mailIt($id, $from, $place, $feeling) {
-        $message = '
-            <html>
-            <head>
-            <title>Your Friend Just Teleported!</title>
-            </head>
-            <body>
-            <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling '.$feeling.' in '.$place.', right now.</p>
-            <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia.com</a></p>
-            <p>Oh! .. and you have to guess who that friend is!</p>
-            <p>Yours Truly,<br><b><i>The Gapelian Team</i></b></p>
-            </body>
-            </html>
-            ';
+    function mailIt($id, $from, $place, $feeling, $name) {
+        $file = file_get_contents('/var/www/html/email.html', FILE_USE_INCLUDE_PATH);
+        $message = str_replace("#friend#", $name, $file);
+        $message = str_replace("#place#", $place, $message);
+        $message = str_replace("#feeling#", $feeling, $message);
+       
         $mail = new PHPMailer(); // create a new object
         $mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only

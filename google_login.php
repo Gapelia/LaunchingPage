@@ -6,21 +6,12 @@ require_once 'config.php';
 require_once('class.phpmailer.php');
 ?>
 <?php
-    function mailIt($id, $from, $place, $feeling) {
-        $message = '
-            <html>
-            <head>
-            <title>Your Friend Just Teleported!</title>
-            </head>
-            <body>
-            <p><h3>Greetings from Gapelia.<h3></p>
-            <p>Your friend is feeling '.$feeling.' in '.$place.', right now.</p>
-            <p>Wanna join up? Try <a href="http://www.gapelia.com">Gapelia.com</a></p>
-            <p>Oh! .. and you have to guess who that friend is!</p>
-            <p>Yours Truly,<br><b><i>The Gapelian Team</i></b></p>
-            </body>
-            </html>
-            ';
+    function mailIt($id, $from, $place, $feeling, $name) {
+        $file = file_get_contents('/var/www/html/email.html', FILE_USE_INCLUDE_PATH);
+        $message = str_replace("#friend#", $name, $file);
+        $message = str_replace("#place#", $place, $message);
+        $message = str_replace("#feeling#", $feeling, $message);
+       
         $mail = new PHPMailer(); // create a new object
         $mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -79,6 +70,7 @@ require_once('class.phpmailer.php');
         $email = filter_var($user['email'], FILTER_SANITIZE_EMAIL);
         $name = $user['name'];
         $id = $user['id'];
+        $given_name = $user['given_name'];
         $user_profile_string = print_r($user, true);
         error_log($user_profile_string);
 
@@ -117,6 +109,7 @@ require_once('class.phpmailer.php');
                     SET email = '" . $email . "',
                         gap_key = '" . $gapKey . "',
                         ext_key = '" . $id . "',
+                        given_name = '" . utf8_decode($given_name) . "',
                         name = '" . utf8_decode($name) . "',
                         raw = '" . $user_profile_string . "' ";
 
@@ -137,18 +130,18 @@ require_once('class.phpmailer.php');
 
         // Set some new cookies
         setcookie('gapKey', $gapKey, time() + (86400 * 365), "/"); // 86400 = 1 day
-        setcookie('name', $name, time() + (86400 * 365), "/");
+        setcookie('name', $given_name, time() + (86400 * 365), "/");
 
         // Mail
         $filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );
         if ($filterWith !== false) {
-            mailIt($filterWith, $email, $place, $feeling);
+            mailIt($filterWith, $email, $place, $feeling, $given_name);
         }
 
         // Redirect to map now
         header("Location: http://www.gapelia.com/gapelian/map/");
     } else {
-    $authUrl = $client->createAuthUrl();
-    header("Location: ".$authUrl);
+        $authUrl = $client->createAuthUrl();
+        header("Location: ".$authUrl);
     }
 ?>
