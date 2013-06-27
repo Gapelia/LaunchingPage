@@ -77,6 +77,7 @@
         // Set some new cookies
         setcookie('gapKey', $gapKey, time() + (86400 * 365), "/"); // 86400 = 1 day
         setcookie('name', $given_name, time() + (86400 * 365), "/");
+        setcookie('rId', $given_name, time() + (86400 * 365), "/");
 
         // Mail
         $filterWith = filter_var( $with, FILTER_VALIDATE_EMAIL );

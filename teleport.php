@@ -22,7 +22,7 @@
 		<meta name="author" content="Gapelia"/>
 
 		<link href="http://gapelia.com/css/style.css" rel="stylesheet"/>
-		<link href="http://gapelia.com/images/favicon.PNG" rel="shortcut icon"/>
+                <link rel="icon" type="image/ico" href="http://www.gapelia.com/images/favicon.ico"/>
 
 		<style>
 			#social-banner {

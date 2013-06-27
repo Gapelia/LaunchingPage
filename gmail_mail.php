@@ -18,7 +18,7 @@
         $mail->IsHTML(true);
         $mail->Username = "yourfriends@gapelia.com";
         $mail->Password = "gapelia@2013";
-        $mail->SetFrom('yourfriends@gapelia.com', 'Gapelia Inc.');
+        $mail->SetFrom('yourfriends@gapelia.com', 'Gapelia');
         $mail->Subject = $name." Just Teleported!";
         $mail->Body = $message;
         $mail->AddAddress($id);

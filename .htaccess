@@ -2,8 +2,8 @@ Options +FollowSymLinks
 RewriteEngine on
 
 # redirect from non www. domain to www. to prevent duplicate listings for SEO
-RewriteCond %{HTTP_HOST} ^gapelia\.com$ [NC] 
-RewriteRule ^(.*)$ http://www.gapelia.com/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^gapelia\.com$ [NC]
+#RewriteRule ^(.*)$ http://www.gapelia.com/$1 [R=301,L]
 
 # Anti XSS protection
 RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
@@ -40,8 +40,8 @@ RewriteRule    ^facebook/?$     /facebook_login.php [L]
 RewriteRule    ^mail/?$         /mail_login.php [L]
 RewriteRule    ^google/?$       /google_login.php [L]
 RewriteRule    ^teleport/?$     /teleport.php [L]
+RewriteRule    ^logout/?$     /logout.php [L]
 RewriteRule    ^gapelian/new/?$     /newGapelian.php [L]
 RewriteRule    ^gapelian/login/?$   /oldGapelian.php [L]
 RewriteRule    ^gapelian/map/?$     /gapelianMap.php [L]
 ErrorDocument   404 /404.php
-#RewriteRule    ^(.*)?$    /404.php [L]

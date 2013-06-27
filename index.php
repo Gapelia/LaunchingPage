@@ -17,7 +17,7 @@
         <meta name="keywords" content=""/>
 		<meta name="author" content="Gapelia"/>
 		<link href="css/style.css" rel="stylesheet"/>
-		<link href="images/favicon.PNG" rel="shortcut icon"/>
+		<link rel="icon" type="image/ico" href="http://www.gapelia.com/images/favicon.ico"/>
 		<style>
 			#social-banner {
 				width: 100%; height: auto;

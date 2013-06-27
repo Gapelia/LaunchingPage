@@ -62,6 +62,7 @@
 		<title>Gapelia</title>
 
 		<link href="http://gapelia.com/css/global.css" rel="stylesheet"/>
+                <link rel="icon" type="image/ico" href="http://www.gapelia.com/images/favicon.ico"/>
 
 		<style>
 			html { height: 100%; }
@@ -212,7 +213,7 @@
 			</div>
 
 			<div id="map-meta">
-				<span>Share how the world thinks</span> <a id="logoff" href="/" onclick="logoff()">Logoff</a> | <a href="/">BACK</a>
+				<span>Share how the world thinks</span> <a id="logoff" onclick="logoff()" href="/logout/" >Logoff</a> | <a href="/">BACK</a>
 			</div>
 		</header>
 
@@ -228,7 +229,12 @@
 		<script src="http://platform.tumblr.com/v1/share.js"></script>
 
 		<script>
-			function logoff() { $.removeCookie("gapKey"); }
+                        $("#logoff").click( function() {
+                            logoff();
+                        });
+			function logoff() { 
+                            $.cookie("gapKey", null);
+                        }
 			$(document).ready(function() { initialize(); });
 		</script>
 
@@ -239,17 +245,22 @@
 					// center: new google.maps.LatLng(40.420088, -3.688),
 					center: new google.maps.LatLng(31.633333, -9.600000),
 					zoom: 3,
-					mapTypeControl: true,
-					// draggable: false,
-					scaleControl: true,
-					scrollwheel: true,
-					navigationControl: false,
-					streetViewControl: false,
+					mapTypeControl: false,
+                                        //draggable: false,
+                                        scaleControl: false,
+                                        scrollwheel: false,
+                                        navigationControl: false,
+                                        streetViewControl: false,
+                                        panControl: false,
+                                        zoomControl: false,
+                                        mapTypeControl: false,
+                                        streetViewControl: false,
+                                        overviewMapControl: false,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
 
 				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
+                                
 				var styledMapOptions = {
 					map: map,
 					name: "gapelia_style"
